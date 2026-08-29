@@ -32,3 +32,11 @@ coverage/
 .idea/
 .vscode/*
 !.vscode/extensions.json
+
+# Next.js
+.next/
+next-env.d.ts
+
+# lokal gespeicherte Anmeldungen (nur Entwicklungsbetrieb)
+.daten/
+tsconfig.tsbuildinfo
