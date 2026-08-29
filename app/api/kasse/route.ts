@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { anbieterIstVollstaendig, fehlendeAngaben } from "@/lib/anbieter";
 import { PRODUKT } from "@/lib/preis";
-import { basisAdresse, stripe } from "@/lib/stripe";
+import { basisAdresse } from "@/lib/adresse";
+import { stripe } from "@/lib/stripe";
 import { WIDERRUF } from "@/lib/widerruf";
 
 export async function POST(anfrage: Request) {

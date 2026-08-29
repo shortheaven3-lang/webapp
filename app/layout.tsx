@@ -1,15 +1,33 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PRODUKT } from "@/lib/preis";
+import { basisAdresse } from "@/lib/adresse";
 import "./globals.css";
 
+const BESCHREIBUNG =
+  "Dreißig Tage, eine Lektion pro Tag: ein Gedanke, eine Übung, eine Frage. " +
+  "Die ersten Tage kosten nichts.";
+
 export const metadata: Metadata = {
+  // Damit relative Bild- und Seitenadressen in den Vorschauen absolut werden.
+  metadataBase: new URL(basisAdresse()),
   title: {
     default: PRODUKT.name,
     template: `%s — ${PRODUKT.name}`,
   },
-  description:
-    "Ein geführtes Programm in dreißig Tagen: sehen, was ist. Grenzen ziehen. Handeln. Loslassen.",
+  description: BESCHREIBUNG,
+  openGraph: {
+    type: "website",
+    locale: "de_AT",
+    siteName: PRODUKT.name,
+    title: PRODUKT.name,
+    description: BESCHREIBUNG,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PRODUKT.name,
+    description: BESCHREIBUNG,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

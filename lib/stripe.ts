@@ -25,14 +25,3 @@ export function stripe(): Stripe | null {
 export function verkaufIstScharf(): boolean {
   return Boolean(process.env.STRIPE_SECRET_KEY && process.env.ZUGANG_GEHEIMNIS);
 }
-
-/** Basisadresse für Rücksprünge aus Stripe. */
-export function basisAdresse(): string {
-  const gesetzt = process.env.APP_URL;
-  if (gesetzt) return gesetzt.replace(/\/$/, "");
-
-  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
-  if (vercel) return `https://${vercel}`;
-
-  return "http://localhost:3000";
-}

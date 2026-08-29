@@ -97,3 +97,14 @@ Ein Eintrag je Entscheidung, neueste oben.
 * **Verworfen:** Nur ein Kommentar im Code. Der wird gelesen, wenn es zu spaet ist.
 * **Bewusst nicht:** Die Rechtsseiten selbst sperren. Sie muessen erreichbar bleiben, auch
   waehrend sie unfertig sind.
+
+## 2026-08-29 — robots.txt und Sitemap bei jeder Anfrage erzeugen
+
+* **Lage:** Beide werden normalerweise beim Bauen erzeugt und frieren damit die Adresse ein,
+  die zu diesem Zeitpunkt bekannt war. Wer APP_URL spaeter nachtraegt, haette eine Sitemap
+  voller localhost-Adressen ausgeliefert, ohne dass etwas kaputt aussieht.
+* **Wahl:** force-dynamic fuer beide. Sie sind winzig, die Kosten dafuer sind zu
+  vernachlaessigen.
+* **Bleibt bestehen:** Das Vorschaubild und metadataBase haengen weiterhin am Bauzeitpunkt.
+  Die Verkaufsseite dafuer dynamisch zu machen waere zu teuer; stattdessen steht im README,
+  dass APP_URL vor dem Bau gesetzt sein muss.

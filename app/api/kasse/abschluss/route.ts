@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { baueZugangsWert, ZUGANG_COOKIE, ZUGANG_MAX_ALTER } from "@/lib/zugang";
-import { basisAdresse, stripe } from "@/lib/stripe";
+import { basisAdresse } from "@/lib/adresse";
+import { stripe } from "@/lib/stripe";
 
 /**
  * Rücksprung aus Stripe. Die Sitzung wird serverseitig bei Stripe nachgefragt —

@@ -77,6 +77,29 @@ Der Geldpfad-Test bricht ab, wenn auf seinem Port schon etwas antwortet. Das ist
 Sonst prüft ein Lauf stillschweigend gegen einen alten Serverstand und meldet grün, obwohl
 die Schranke offen steht.
 
+## Live schalten
+
+Die App ist für Vercel vorbereitet. Der Weg, Schritt für Schritt:
+
+1. Auf [vercel.com](https://vercel.com) mit dem GitHub-Konto anmelden und
+   `shortheaven3-lang/webapp` importieren. Framework wird als Next.js erkannt, an den
+   Bau-Einstellungen ist nichts zu ändern.
+2. Vor dem ersten Bau die Umgebungsvariablen aus `.env.example` eintragen (Settings →
+   Environment Variables). **`APP_URL` muss vor dem Bau gesetzt sein** — sie landet in den
+   Vorschaubild-Adressen, die beim Bauen entstehen. Nutzt du keine eigene Domain, kannst du
+   sie weglassen; Vercel liefert die Adresse dann selbst.
+3. Deploy. Danach unter Settings → Domains die eigene Domain verbinden, falls vorhanden.
+4. `APP_URL` auf die endgültige Adresse setzen und **neu bauen** (Deployments → Redeploy).
+5. Den Link teilen und prüfen, dass das Vorschaubild erscheint.
+
+Mitgeliefert sind `robots.txt`, `sitemap.xml` (nur die frei zugänglichen Seiten), ein
+Favicon und ein Vorschaubild unter `/opengraph-image`.
+
+> Das Vorschaubild wird in einer serifenlosen Schrift gesetzt, weil auf dem Server keine
+> Serifenschrift verfügbar ist. Wenn dir das wichtig ist, lege eine `.ttf` unter `app/` ab
+> und übergib sie in `app/opengraph-image.tsx` an `ImageResponse` — das ist der einzige Weg,
+> auf dem eine Schrift dort zuverlässig ankommt.
+
 ## Scharf schalten
 
 1. `.env.example` nach `.env.local` kopieren und ausfüllen.
