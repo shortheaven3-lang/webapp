@@ -1,25 +1,44 @@
 ---
 tag: 7
-titel: "Woche 1: Was du gesehen hast"
+titel: "Woche 1: Was dir aufgefallen ist"
 saeule: "Der Spiegel"
 dauer: 10
 kostenlos: false
-entwurf: true
-vorschau: "Entwurf — Text folgt."
+vorschau: "Kein neuer Gedanke heute. Sondern das, was die ersten sechs Tage bei dir hinterlassen haben."
 ---
 
-## Der Gedanke
+Heute kommt kein neuer Gedanke. Heute wird sortiert.
 
-> **Entwurf.** Diese Lektion ist im Bogen vorgesehen, aber noch nicht geschrieben.
-> Der Aufbau von Tag 1 bis 5 ist die Vorlage: ein Gedanke, der eine verbreitete
-> Verwechslung aufloest, eine Uebung, die heute machbar ist, eine Frage zum Mitnehmen.
+Das klingt nach Pflichtübung, ist aber der Tag, an dem sich entscheidet, ob die Woche etwas
+verändert oder nur nett zu lesen war. Sechs Tage lang hast du hingeschaut. Wenn das Gesehene
+jetzt nicht irgendwo landet, ist es in zwei Wochen weg.
 
-Thema dieser Lektion: **Woche 1: Was du gesehen hast** — Saeule *Der Spiegel*.
+Also: eine halbe Stunde, ein Blatt, keine Ablenkung.
 
-## Die Uebung
+## Die Übung
 
-Noch offen.
+Geh deine Notizen der letzten sechs Tage durch — die drei Momente aus Tag 1, die eine Sache aus
+Tag 2, die Rollen aus Tag 6. Und dann beantworte drei Fragen schriftlich.
 
-## Die Frage fuer heute
+**Erstens: Was hat sich am unangenehmsten angefühlt?**
 
-Noch offen.
+Nicht was am wichtigsten war. Was am meisten gezwickt hat. Unangenehm heißt fast immer, dass
+du etwas erkannt hast, das du lieber nicht erkannt hättest. Da liegt der Rest der dreißig Tage.
+
+**Zweitens: Wo taucht dieselbe Person auf?**
+
+Bei den meisten wiederholt sich in den Notizen ein Name. Ein Mensch, dem gegenüber du dich
+besonders oft übergehst. Schreib ihn auf. Woche zwei wird konkret, und du wirst wissen, wo.
+
+**Drittens: Was hat sich schon geändert?**
+
+Auch wenn es klein ist. Eine Zusage, die du nicht sofort gegeben hast. Ein Moment, in dem du
+gemerkt hast, was passiert, während es passiert. Das ist der eigentliche Fortschritt — nicht
+anders handeln, sondern früher bemerken.
+
+Wenn bei Frage drei nichts steht: auch eine Antwort. Dann warst du diese Woche Leser und nicht
+Teilnehmer. Das lässt sich ab morgen ändern.
+
+## Die Frage für heute
+
+Was von dieser Woche will ich nicht vergessen?

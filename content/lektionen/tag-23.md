@@ -1,25 +1,48 @@
 ---
 tag: 23
-titel: "Die Rechnung, die niemand begleicht"
+titel: "Die Rechnung, die keiner zahlt"
 saeule: "Die Stille"
 dauer: 8
 kostenlos: false
-entwurf: true
-vorschau: "Entwurf — Text folgt."
+vorschau: "Manche Ungerechtigkeiten werden nie ausgeglichen. Und irgendwann ist es günstiger, sie abzuschreiben."
 ---
 
-## Der Gedanke
+Es gibt Rechnungen, die nie beglichen werden.
 
-> **Entwurf.** Diese Lektion ist im Bogen vorgesehen, aber noch nicht geschrieben.
-> Der Aufbau von Tag 1 bis 5 ist die Vorlage: ein Gedanke, der eine verbreitete
-> Verwechslung aufloest, eine Uebung, die heute machbar ist, eine Frage zum Mitnehmen.
+Die Jahre, die du in eine Sache gesteckt hast, aus der nichts wurde. Die Rücksicht, die nie
+erwidert kam. Die Zeit, die dir jemand genommen hat und die er dir nicht zurückgeben kann, weil
+niemand Zeit zurückgeben kann.
 
-Thema dieser Lektion: **Die Rechnung, die niemand begleicht** — Saeule *Die Stille*.
+Das Gerechtigkeitsgefühl weigert sich, das zu akzeptieren. Es besteht darauf, dass irgendwann
+irgendwer einsieht, was hier schiefgelaufen ist. Das ist verständlich und meistens vergeblich.
 
-## Die Uebung
+Ein Detail wird dabei übersehen: Die Rechnung offen zu halten kostet auch etwas. Nicht den
+Schuldner — der zahlt ohnehin nicht. Es kostet dich, in Aufmerksamkeit, die woanders fehlt.
 
-Noch offen.
+Abschreiben heißt nicht, dass es gerecht wird. Es heißt nur, dass du aufhörst, in eine
+Forderung einzuzahlen, die niemand bedient.
 
-## Die Frage fuer heute
+## Die Übung
 
-Noch offen.
+Nimm dir ein Blatt und schreib oben: *Was mir geschuldet wird.*
+
+Dann alles auf, was dir einfällt. Von wem, wofür, seit wann. Keine Bewertung, keine Nuancen,
+einfach die Liste. Bei den meisten wird sie länger als erwartet, und allein das ist die halbe
+Lehre.
+
+Dann geh sie durch und markiere:
+
+- **E** für die, bei denen ein Ausgleich noch möglich ist. Da gibt es eine Handlung: ein
+  Gespräch, eine Bitte, eine Forderung. Notier sie.
+- **A** für die, bei denen es das nicht gibt. Weil die Person weg ist, weil zu viel Zeit
+  vergangen ist, weil es nichts gibt, das den Schaden aufwöge.
+
+Bei den A-Einträgen tu heute nichts weiter, als sie laut vorzulesen und dahinter zu sagen:
+*Das bekomme ich nicht zurück.*
+
+Das ist kein Trick und macht es nicht leicht. Aber ausgesprochen wird es zu einer Tatsache, und
+Tatsachen kann man hinter sich lassen. Erwartungen nicht.
+
+## Die Frage für heute
+
+Was halte ich offen, das niemand mehr begleichen wird?

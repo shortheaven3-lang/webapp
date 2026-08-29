@@ -60,6 +60,26 @@ describe("Lektionen", () => {
     assert.equal(lektionFuerTag(0), undefined);
   });
 
+  test("jede Lektion hat Substanz, nicht nur eine Überschrift", () => {
+    // Verhindert, dass eine angefangene Lektion unbemerkt ausgeliefert wird.
+    for (const l of lektionen) {
+      const woerter = l.quelle.split(/\s+/).filter(Boolean).length;
+      assert.ok(woerter >= 120, `Tag ${l.tag} hat nur ${woerter} Wörter`);
+    }
+  });
+
+  test("jede Lektion hat Übung und Abschlussfrage", () => {
+    for (const l of lektionen) {
+      assert.match(l.quelle, /^## Die Übung$/m, `Tag ${l.tag} ohne Übung`);
+      assert.match(l.quelle, /^## Die Frage für heute$/m, `Tag ${l.tag} ohne Abschlussfrage`);
+    }
+  });
+
+  test("keine Lektion ist mehr als Entwurf ausgewiesen", () => {
+    const entwuerfe = lektionen.filter((l) => l.entwurf).map((l) => l.tag);
+    assert.deepEqual(entwuerfe, [], `noch Entwurf: Tag ${entwuerfe.join(", ")}`);
+  });
+
   test("Markdown wird zu HTML", () => {
     const html = alsHtml("## Titel\n\nEin Satz mit **Fettung**.");
     assert.match(html, /<h2/);

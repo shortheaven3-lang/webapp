@@ -4,22 +4,43 @@ titel: "Woche 3: Was du getan hast"
 saeule: "Das Ritual"
 dauer: 10
 kostenlos: false
-entwurf: true
-vorschau: "Entwurf — Text folgt."
+vorschau: "Drei Wochen. Diese Woche wird nicht nachgedacht, sondern gezählt."
 ---
 
-## Der Gedanke
+Diese Woche wird nicht nachgedacht. Diese Woche wird gezählt.
 
-> **Entwurf.** Diese Lektion ist im Bogen vorgesehen, aber noch nicht geschrieben.
-> Der Aufbau von Tag 1 bis 5 ist die Vorlage: ein Gedanke, der eine verbreitete
-> Verwechslung aufloest, eine Uebung, die heute machbar ist, eine Frage zum Mitnehmen.
+Woche drei ging ums Tun, und Tun lässt sich nachrechnen. Genau darum drückt man sich an dieser
+Stelle gern und schreibt lieber etwas über Erkenntnisse.
 
-Thema dieser Lektion: **Woche 3: Was du getan hast** — Saeule *Das Ritual*.
+Also: An wie vielen der letzten sieben Tage hast du deine tägliche Sache gemacht?
 
-## Die Uebung
+Schreib die Zahl hin, bevor du weiterliest.
 
-Noch offen.
+## Die Übung
 
-## Die Frage fuer heute
+**Die Zahl ansehen, ohne sie zu bewerten.**
 
-Noch offen.
+Sieben ist gut. Vier ist auch gut, das ist mehr als die Hälfte. Eins ist besser als null. Und
+null ist eine brauchbare Information, keine Schande — sie sagt dir, dass die Sache zu groß war
+oder keinen festen Platz im Tag hatte.
+
+**Das Muster suchen.**
+
+Welche Tage sind ausgefallen? Bei den meisten sind es dieselben — die vollen, die mit
+Auswärtsterminen, die Wochenenden. Wenn du das Muster kennst, kannst du für diese Tage eine
+Notfallgröße festlegen. Zwei Sätze statt einer Seite, drei Minuten statt fünfzehn.
+
+**Eine Sache benennen, die diese Woche entstanden ist.**
+
+Etwas, das es vor sieben Tagen nicht gab. Ein paar Absätze, ein geführtes Gespräch, ein Teil
+einer Sache, die du seit Monaten vor dir herschiebst. Das ist die Antwort auf die Frage, ob
+Tun etwas bringt — nicht ein Gefühl, sondern ein Gegenstand.
+
+**Für die letzte Woche eine Vorgabe festlegen.**
+
+Woche vier geht ums Loslassen und wird ruhiger. Die tägliche Sache läuft daneben weiter. Leg
+jetzt fest, was gilt, damit sie im ruhigeren Ton nicht untergeht.
+
+## Die Frage für heute
+
+An welchen Tagen bricht es bei mir ab — und was haben diese Tage gemeinsam?

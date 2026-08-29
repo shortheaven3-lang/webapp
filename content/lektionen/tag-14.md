@@ -4,22 +4,44 @@ titel: "Woche 2: Wo deine Grenze verläuft"
 saeule: "Der Spiegel"
 dauer: 10
 kostenlos: false
-entwurf: true
-vorschau: "Entwurf — Text folgt."
+vorschau: "Halbzeit. Was hat gehalten, was ist eingeknickt, und was war nur Theorie?"
 ---
 
-## Der Gedanke
+Halbzeit. Und Woche zwei war die unbequemere, weil sie nicht beim Nachdenken geblieben ist.
 
-> **Entwurf.** Diese Lektion ist im Bogen vorgesehen, aber noch nicht geschrieben.
-> Der Aufbau von Tag 1 bis 5 ist die Vorlage: ein Gedanke, der eine verbreitete
-> Verwechslung aufloest, eine Uebung, die heute machbar ist, eine Frage zum Mitnehmen.
+Bevor du weiterliest: Hol die Notizen von Tag 8 bis 13. Aus dem Kopf geht dieser Rückblick
+schief, weil der Kopf sich an das erinnert, was er erinnern will.
 
-Thema dieser Lektion: **Woche 2: Wo deine Grenze verläuft** — Saeule *Der Spiegel*.
+## Die Übung
 
-## Die Uebung
+Vier Fragen, schriftlich.
 
-Noch offen.
+**Was hast du tatsächlich gemacht?**
 
-## Die Frage fuer heute
+Nicht was du verstanden hast. Was du gemacht hast. Die Absage ohne Begründung, die eine
+ausgesprochene Grenze, die zwei Stunden ohne Handy. Hak ab, was passiert ist.
 
-Noch offen.
+**Wo bist du eingeknickt?**
+
+Auch das aufschreiben, und zwar ohne Bewertung daneben. Interessant ist nicht, dass du
+eingeknickt bist, sondern **an welcher Stelle**. Beim Aussprechen? Erst in der Stille danach?
+Oder schon vorher, indem du die Situation vermieden hast, in der es nötig gewesen wäre?
+
+Der letzte Fall ist der häufigste und der am schwersten zu sehende.
+
+**Was ist tatsächlich passiert?**
+
+Bei jeder Grenze, die du gezogen hast: Was war die Reaktion? Und wie verhält sie sich zu dem,
+was du befürchtet hattest?
+
+Bei den meisten liegt zwischen Befürchtung und Wirklichkeit ein großer Abstand. Merk ihn dir.
+Nächstes Mal steht dieselbe Befürchtung wieder im Raum, und dann hast du einen Gegenbeleg.
+
+**Was steht noch aus?**
+
+Es gibt vermutlich eine Sache, die du diese Woche hättest ansprechen sollen und nicht
+angesprochen hast. Schreib sie auf, mit einem Datum daneben. Ohne Datum passiert sie nicht.
+
+## Die Frage für heute
+
+Was war diese Woche schwerer — es zu sagen, oder die Stille danach auszuhalten?

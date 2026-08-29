@@ -179,5 +179,6 @@ das später eng wird:
 * **Kein Fortschritt gespeichert.** Es gibt keine Markierung, welcher Tag erledigt ist.
 * **Kein E-Mail-Versand.** Der tägliche Impuls, den die Verkaufsseite in Aussicht stellt,
   ist noch nicht gebaut — `ANMELDUNG_WEBHOOK` übergibt die Adresse nur an einen Dienst.
-* **25 von 30 Lektionen sind Entwürfe.** Tag 1 bis 5 sind ausgeschrieben und dienen als
-  Maßstab für Aufbau, Länge und Ton.
+* **Der Text ist geschrieben, aber nicht lektoriert.** Alle 30 Lektionen stehen, rund 7.600
+  Wörter. Vor dem Verkauf gehört das einmal von jemandem gelesen, der nicht daran
+  geschrieben hat.

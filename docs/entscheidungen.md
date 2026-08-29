@@ -130,3 +130,16 @@ Ein Eintrag je Entscheidung, neueste oben.
   der nie gebaut wurde. Genau das ist beim Bau der Anmeldung passiert.
 * **Wahl:** Die Serverhilfe vergleicht das Datum von .next/BUILD_ID mit der juengsten Datei
   in app, lib, components und content und bricht mit klarer Ansage ab.
+
+## 2026-08-29 — Alle 30 Lektionen ausgeschrieben
+
+* **Lage:** 25 der 30 Tage waren Platzhalter. Ohne sie gab es kein Produkt, nur eine
+  Verkaufsseite.
+* **Wahl:** Alle ausgeschrieben, rund 7.600 Woerter, im Aufbau von Tag 1 bis 5: ein Gedanke
+  ohne Ueberschrift, dann die Uebung, dann die Frage. Laenge zwischen 195 und 363 Woertern,
+  damit kein Tag sich anfuehlt wie Fuellmaterial und keiner wie ein Nachmittag.
+* **Bogen:** Woche 1 Sehen, Woche 2 Grenzen, Woche 3 Handeln, Woche 4 Loslassen. Die
+  Rueckblicke an Tag 7, 14, 21 und 28 greifen die Notizen der jeweiligen Woche namentlich
+  auf — sie funktionieren nur, wenn die Uebungen davor gemacht wurden. Das ist Absicht.
+* **Offen:** Der Text ist nicht lektoriert. Das gehoert vor dem Verkauf von jemandem
+  gelesen, der nicht daran geschrieben hat.
