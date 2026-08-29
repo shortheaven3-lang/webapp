@@ -23,15 +23,15 @@ export default function Anmeldung({ quelle }: { quelle: string }) {
 
       if (antwort.ok) {
         setZustand("gut");
-        setMeldung(daten.meldung ?? "Eingetragen. Die ersten drei Tage kommen per Mail.");
+        setMeldung(daten.meldung ?? "Passt, du stehst auf der Liste.");
         setEmail("");
       } else {
         setZustand("schlecht");
-        setMeldung(daten.meldung ?? "Das hat nicht geklappt.");
+        setMeldung(daten.meldung ?? "Hat leider nicht geklappt.");
       }
     } catch {
       setZustand("schlecht");
-      setMeldung("Keine Verbindung. Bitte später noch einmal versuchen.");
+      setMeldung("Keine Verbindung. Probier es gleich noch einmal.");
     }
   }
 

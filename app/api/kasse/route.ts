@@ -1,13 +1,31 @@
 import { NextResponse } from "next/server";
 import { PRODUKT } from "@/lib/preis";
 import { basisAdresse, stripe } from "@/lib/stripe";
+import { WIDERRUF } from "@/lib/widerruf";
 
-export async function POST() {
+export async function POST(anfrage: Request) {
   const s = stripe();
   if (!s || !process.env.ZUGANG_GEHEIMNIS) {
     return NextResponse.json(
       { meldung: "Der Verkauf ist noch nicht scharf geschaltet." },
       { status: 503 },
+    );
+  }
+
+  // Ohne Zustimmung keine Kasse. Die Prüfung gehört auf den Server: ein
+  // deaktivierter Knopf im Browser ist keine Hürde, sondern eine Bitte.
+  let koerper: unknown;
+  try {
+    koerper = await anfrage.json();
+  } catch {
+    koerper = null;
+  }
+  const { zustimmung } = (koerper ?? {}) as { zustimmung?: unknown };
+
+  if (zustimmung !== true) {
+    return NextResponse.json(
+      { meldung: "Ohne die Zustimmung zur sofortigen Bereitstellung geht es nicht weiter." },
+      { status: 400 },
     );
   }
 
@@ -29,6 +47,30 @@ export async function POST() {
           },
         },
       ],
+
+      // Die Zustimmung wird bei Stripe hinterlegt. Damit hängt der Nachweis am
+      // Zahlungsvorgang selbst und überlebt jeden Umbau dieser App.
+      metadata: {
+        widerruf_zustimmung: "ja",
+        widerruf_version: WIDERRUF.version,
+        widerruf_zeitpunkt: new Date().toISOString(),
+        widerruf_text: WIDERRUF.text.slice(0, 480),
+      },
+
+      // Derselbe Satz noch einmal auf der Kassenseite, damit die Zustimmung
+      // nicht nur auf der Seite davor gestanden hat.
+      custom_text: {
+        submit: { message: WIDERRUF.text },
+      },
+
+      // Zusätzliche Zustimmung zu den AGB durch Stripe. Setzt voraus, dass im
+      // Stripe-Konto unter Checkout-Einstellungen eine AGB-Adresse hinterlegt
+      // ist — sonst weist Stripe die Sitzung ab. Deshalb erst einschalten,
+      // wenn das erledigt ist.
+      ...(process.env.STRIPE_AGB_ZUSTIMMUNG === "1"
+        ? { consent_collection: { terms_of_service: "required" as const } }
+        : {}),
+
       // Für digitale Produkte an Verbraucher in der EU: Stripe Tax berechnet
       // die Umsatzsteuer nach dem Wohnsitzland der Kundin bzw. des Kunden.
       automatic_tax: { enabled: true },

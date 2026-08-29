@@ -1,45 +1,42 @@
 ---
 tag: 1
-titel: "Der Ort, an dem du dich verlassen hast"
+titel: "Die halbe Sekunde nach dem Ja"
 saeule: "Der Spiegel"
 dauer: 8
 kostenlos: true
-vorschau: "Selbstverlassen passiert nicht an einem Tag. Es passiert in kleinen Momenten, in denen du dich für jemand anderen entscheidest."
+vorschau: "Es gibt diesen kurzen Moment, nachdem du zugesagt hast. In dem es im Bauch kippt und du es schon weißt."
 ---
 
-## Der Gedanke
+Es gibt diesen Moment kurz nach dem Ja. Eine halbe Sekunde, in der es im Bauch kippt und du
+es schon weißt. Dann sagst du dir, dass es halb so wild ist, und machst weiter.
 
-Selbstverlassen passiert nicht an einem Tag.
+Ich habe lange gedacht, so etwas passiert in großen Entscheidungen. Dass man einmal falsch
+abbiegt und dann in einem Leben aufwacht, das einem nicht gehört. So läuft es aber nicht.
+Es läuft über diese halben Sekunden, und davon gibt es viele.
 
-Es passiert beiläufig. In dem Moment, in dem du zusagst, obwohl du müde bist. In dem du
-schweigst, obwohl dir etwas wehgetan hat. In dem du dich erklärst, obwohl du nichts falsch
-gemacht hast.
+Am Ende steht man da und sucht die eine Stelle, an der es schiefging. Die findet man nicht.
+Es gab sie nie.
 
-Jeder dieser Momente ist zu klein, um ihn ernst zu nehmen. Genau deshalb summieren sie sich
-unbemerkt. Irgendwann stehst du in einem Leben, das du nicht gewählt hast, und findest keinen
-einzelnen Punkt, an dem du falsch abgebogen wärst.
-
-Den gibt es auch nicht. Es waren tausend kleine.
-
-Die gute Nachricht steckt in derselben Mechanik: Wenn dich tausend kleine Entscheidungen von
-dir weggeführt haben, führen dich kleine Entscheidungen auch wieder zurück. Du musst dein
-Leben nicht umstürzen. Du musst anfangen zu bemerken.
+Was tröstlich ist, wenn man es zu Ende denkt: Wenn dich lauter kleine Momente hierher
+gebracht haben, dann bringen dich kleine Momente auch wieder weg. Du musst nichts umstürzen.
+Für heute reicht es, sie überhaupt zu bemerken.
 
 ## Die Übung
 
-Nimm dir die vergangenen sieben Tage vor und suche **drei Momente**, in denen du gegen dich
-entschieden hast. Nicht die großen. Die beiläufigen.
+Geh die letzte Woche durch und such drei Stellen, an denen du gegen dich entschieden hast.
+Nicht die großen. Die beiläufigen. Die Zusage am Telefon, das Schlucken beim Abendessen, die
+Nachricht, auf die du sofort geantwortet hast, obwohl du gerade woanders warst.
 
-Schreibe zu jedem auf:
+Schreib zu jeder drei Dinge auf:
 
-- Was habe ich getan?
-- Was hätte ich getan, wenn niemand zugesehen hätte?
-- Wovor hat mich das Ja bewahrt?
+- Was habe ich gemacht?
+- Was hätte ich gemacht, wenn niemand zugesehen hätte?
+- Wovor hat mich das bewahrt?
 
-Die dritte Frage ist die wichtige. Selbstverlassen ist keine Schwäche, es ist ein Schutz.
-Du hast dich verlassen, um etwas anderes nicht zu riskieren — einen Streit, eine Enttäuschung,
-das Gefühl, zu viel zu sein. Solange du diesen Schutz nicht siehst, kämpfst du gegen dich
-statt mit dir.
+Die letzte Frage ist die eigentliche. Sich zu verlassen ist keine Charakterschwäche, das ist
+ein Schutz. Du hast Ja gesagt, damit etwas anderes nicht passiert: ein Streit, ein enttäuschtes
+Gesicht, dieses Gefühl, zu viel zu sein. Solange du nicht siehst, wovor du dich geschützt hast,
+kämpfst du gegen dich statt mit dir. Und das gewinnt keiner.
 
 ## Die Frage für heute
 

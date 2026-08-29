@@ -70,11 +70,14 @@ Das ist keine Formalität, sondern die Bedingung dafür, dass verkauft werden da
 
 * **Impressum, AGB und Datenschutz** ausfüllen — die drei Seiten liegen als Platzhalter
   bereit und benennen, was hineingehört.
-* **Widerrufsrecht.** Bei digitalen Inhalten erlischt es vorzeitig nur, wenn vor dem Kauf
-  ausdrücklich zugestimmt wird, dass sofort bereitgestellt wird, *und* bestätigt wird, dass
-  damit das Widerrufsrecht entfällt. Beides gehört in Stripe Checkout
-  (`consent_collection`) und muss dokumentiert sein. Fehlt es, kann jemand das Programm
-  vollständig lesen und danach das Geld zurückverlangen.
+* **Widerrufsrecht — eingebaut.** Vor der Kasse steht ein nicht vorangekreuztes Kästchen mit
+  der Zustimmung zum sofortigen Beginn und dem Hinweis auf das erlöschende Widerrufsrecht.
+  Geprüft wird serverseitig, nicht nur im Browser. Zustimmung, Zeitpunkt und Textfassung
+  landen in den Metadaten der Stripe-Sitzung, hängen also am Zahlungsvorgang selbst. Der
+  Wortlaut steht in `lib/widerruf.ts`; wird er geändert, gehört die Version hochgezählt.
+* **Zusätzliche AGB-Zustimmung durch Stripe** lässt sich mit `STRIPE_AGB_ZUSTIMMUNG=1`
+  einschalten. Setzt voraus, dass im Stripe-Konto unter den Checkout-Einstellungen eine
+  AGB-Adresse hinterlegt ist — sonst weist Stripe die Sitzung ab.
 * **Umsatzsteuer.** `automatic_tax` ist eingeschaltet; dafür muss Stripe Tax im Konto
   eingerichtet sein. Bei digitalen Leistungen an Verbraucher in der EU gilt das
   Bestimmungsland — das ist der Grund für den OSS-Weg.

@@ -1,40 +1,36 @@
 ---
 tag: 5
-titel: "Du willst keine Antwort"
+titel: "Du suchst keinen Rat"
 saeule: "Der Spiegel"
 dauer: 8
 kostenlos: false
-vorschau: "Du fragst drei Leute um Rat. Du bekommst drei Antworten. Und keine fühlt sich richtig an."
+vorschau: "Drei Leute gefragt, drei Antworten bekommen, und keine fühlt sich richtig an. Das hat einen Grund."
 ---
 
-## Der Gedanke
+Du fragst drei Leute. Du bekommst drei Antworten. Keine fühlt sich richtig an.
 
-Du fragst drei Leute um Rat. Du bekommst drei Antworten. Und keine fühlt sich richtig an.
+Das liegt selten an den Antworten. Meistens liegt es daran, dass du gar keinen Rat wolltest.
+Du wolltest jemanden, der die Entscheidung übernimmt, damit sie nicht deine ist, falls sie
+schiefgeht.
 
-Das liegt nicht an den Antworten. Es liegt daran, dass du nie einen Rat gesucht hast. Du hast
-jemanden gesucht, der die Entscheidung übernimmt — damit sie, falls sie falsch ist, nicht
-deine war.
+Ich finde daran nichts Verwerfliches. Entscheiden heißt verlieren: jede Wahl macht die andere
+tot. Wer weiterfragt, hält sich alles offen. Das fühlt sich nach Sorgfalt an und ist Aufschub.
 
-Daran ist nichts Verächtliches. Entscheiden heißt, etwas zu verlieren: jede Wahl tötet die
-Alternative. Wer fragt und fragt und fragt, hält die Alternativen am Leben. Das fühlt sich an
-wie Sorgfalt. Es ist Aufschub.
-
-Der Preis ist unsichtbar, deshalb zahlt man ihn so lange. Man verliert keine Entscheidung —
-man verliert die Zeit dazwischen.
+Und weil der Preis unsichtbar ist, zahlt man ihn so lange. Du verlierst ja keine Entscheidung.
+Du verlierst nur die Monate dazwischen.
 
 ## Die Übung
 
-Nimm die Frage, die du gerade mit dir herumträgst, und schreib sie oben auf ein Blatt.
+Schreib die Frage, die du gerade mit dir herumträgst, oben auf ein Blatt. Dann zwei Spalten:
 
-Darunter zwei Spalten: **Was ich wissen will** und **Was ich nicht entscheiden will.**
+**Was ich wirklich noch nicht weiß** — und — **was ich nicht entscheiden will.**
 
-Sortiere alles ein, was dir zu der Frage einfällt. Du wirst sehen, dass die linke Spalte
-schnell leer ist. Die meisten offenen Fragen sind längst beantwortet — sie sind nur nicht
-entschieden.
+Sortier alles ein, was dir dazu einfällt. Bei den meisten wird die linke Spalte erschreckend
+leer. Die meisten offenen Fragen sind längst beantwortet, sie sind nur nicht entschieden.
 
-Wenn links tatsächlich etwas steht, hol dir genau dazu eine Auskunft. Bei einer Person, nicht
-bei dreien. Und dann entscheide selbst.
+Falls links doch etwas steht: hol dir genau dazu eine Auskunft. Bei einer Person, nicht bei
+dreien. Und dann entscheide selbst.
 
 ## Die Frage für heute
 
-Suche ich noch Informationen — oder suche ich jemanden, der es an meiner Stelle trägt?
+Fehlt mir gerade eine Information? Oder jemand, der es an meiner Stelle trägt?

@@ -183,3 +183,24 @@ a:hover { text-decoration-color: var(--akzent); }
   padding-top: 1.25rem;
   font-size: 0.9rem;
 }
+
+/* Zustimmung zur sofortigen Bereitstellung */
+.zustimmung {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  margin: 0 0 1.1rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--tinte-leise);
+  cursor: pointer;
+}
+.zustimmung input {
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-top: 0.28rem;
+  accent-color: var(--akzent);
+  cursor: pointer;
+}
+.meldung.leise { color: var(--tinte-still); }

@@ -3,7 +3,6 @@ import Link from "next/link";
 import KaufKnopf from "@/components/KaufKnopf";
 import { alleLektionen } from "@/lib/lektionen";
 import { preisFormatiert } from "@/lib/preis";
-import { verkaufIstScharf } from "@/lib/stripe";
 import { hatZugang } from "@/lib/zugang";
 
 export const metadata: Metadata = { title: "Programm" };
@@ -17,8 +16,8 @@ export default async function Uebersicht() {
       <h1>Die {lektionen.length} Tage</h1>
       <p className="vorspann">
         {zugang
-          ? "Dein Zugang ist freigeschaltet. Ein Tag nach dem anderen — das Programm wirkt über die Wiederholung, nicht über die Menge."
-          : "Die ersten Tage sind frei zugänglich. Der Rest wird mit dem Kauf freigeschaltet."}
+          ? "Alles offen. Mein Rat: wirklich einen Tag pro Tag. Es wirkt nicht dadurch, dass du viel liest, sondern dadurch, dass du dranbleibst."
+          : "Die ersten Tage kannst du einfach lesen. Der Rest ist dabei, sobald du das Programm kaufst."}
       </p>
 
       <ul className="tage">
@@ -53,10 +52,10 @@ export default async function Uebersicht() {
         <div className="schranke">
           <h2>Weiterlesen</h2>
           <p>
-            Alle {lektionen.length} Tage, einmalig {preisFormatiert()}. Kein Abo, dauerhafter
-            Zugang.
+            Alle {lektionen.length} Tage für einmalig {preisFormatiert()}. Kein Abo — einmal
+            kaufen und dauerhaft drin bleiben.
           </p>
-          <KaufKnopf scharf={verkaufIstScharf()} beschriftung={`Freischalten — ${preisFormatiert()}`} />
+          <KaufKnopf beschriftung={`Freischalten — ${preisFormatiert()}`} />
         </div>
       )}
     </div>

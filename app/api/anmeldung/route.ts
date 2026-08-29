@@ -13,7 +13,7 @@ export async function POST(anfrage: Request) {
 
   if (typeof email !== "string" || !istEmail(email)) {
     return NextResponse.json(
-      { meldung: "Diese Adresse sieht nicht vollständig aus." },
+      { meldung: "Da fehlt noch etwas an der Adresse." },
       { status: 400 },
     );
   }
@@ -25,7 +25,7 @@ export async function POST(anfrage: Request) {
 
   if (ergebnis.ok) {
     return NextResponse.json({
-      meldung: "Eingetragen. Die ersten drei Tage sind ab sofort frei.",
+      meldung: "Passt, du stehst auf der Liste.",
     });
   }
 
@@ -33,10 +33,10 @@ export async function POST(anfrage: Request) {
     // Bewusst ehrlich: lieber ein sichtbarer Fehler als eine verlorene Adresse.
     console.error("ANMELDUNG_WEBHOOK ist nicht gesetzt — Anmeldung verworfen.");
     return NextResponse.json(
-      { meldung: "Die Anmeldung ist gerade nicht möglich. Bitte später erneut." },
+      { meldung: "Das geht gerade nicht. Probier es später noch einmal." },
       { status: 503 },
     );
   }
 
-  return NextResponse.json({ meldung: "Das hat nicht geklappt." }, { status: 500 });
+  return NextResponse.json({ meldung: "Hat leider nicht geklappt." }, { status: 500 });
 }

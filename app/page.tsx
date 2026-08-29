@@ -3,35 +3,50 @@ import Anmeldung from "@/components/Anmeldung";
 import KaufKnopf from "@/components/KaufKnopf";
 import { alleLektionen, programmLaenge } from "@/lib/lektionen";
 import { PRODUKT, preisFormatiert } from "@/lib/preis";
-import { verkaufIstScharf } from "@/lib/stripe";
 
 const WOCHEN = [
-  { titel: "Sehen", tage: "Tag 1–7", text: "Wo du dich verlassen hast, und wovor dich das geschützt hat." },
-  { titel: "Grenzen", tage: "Tag 8–14", text: "Nein sagen, ohne dich zu erklären. Und aushalten, was danach kommt." },
-  { titel: "Handeln", tage: "Tag 15–21", text: "Anfangen ohne Motivation. Zurückkommen nach dem Aussetzer." },
-  { titel: "Loslassen", tage: "Tag 22–30", text: "Vergeben als Aufhören zu warten. Stille, die nicht Erschöpfung ist." },
+  {
+    titel: "Sehen",
+    tage: "Tag 1–7",
+    text: "Wo du dich verlässt, und wovor dich das eigentlich schützt.",
+  },
+  {
+    titel: "Grenzen",
+    tage: "Tag 8–14",
+    text: "Absagen, ohne dich zu rechtfertigen. Und die Stille danach aushalten.",
+  },
+  {
+    titel: "Handeln",
+    tage: "Tag 15–21",
+    text: "Anfangen, wenn keine Lust da ist. Und weitermachen, nachdem du ausgesetzt hast.",
+  },
+  {
+    titel: "Loslassen",
+    tage: "Tag 22–30",
+    text: "Vergeben, ohne dass es damit in Ordnung war. Und Ruhe, die keine Erschöpfung ist.",
+  },
 ];
 
 export default function Startseite() {
   const lektionen = alleLektionen();
   const frei = lektionen.filter((l) => l.kostenlos);
-  const scharf = verkaufIstScharf();
 
   return (
     <div className="huelle">
       <span className="marke-klein">Ein Programm in {programmLaenge()} Tagen</span>
-      <h1>Du musst dein Leben nicht umstürzen. Du musst anfangen zu bemerken.</h1>
+      <h1>Du merkst es meistens erst hinterher.</h1>
 
       <p className="vorspann">
-        Selbstverlassen passiert nicht an einem Tag — es passiert in tausend kleinen Momenten,
-        in denen du dich für jemand anderen entscheidest. Dieses Programm dreht die Bewegung um.
-        Eine Lektion pro Tag, ein Gedanke, eine Übung, eine Frage. Sieben Minuten, nicht siebzig.
+        Diese halbe Sekunde nach dem Ja, in der es im Bauch kippt. Der Abend, an dem dir auffällt,
+        dass der ganze Tag anderen gehört hat. {programmLaenge()} Tage lang schauen wir uns solche
+        Stellen an. Eine am Tag, sieben Minuten, mit einer Übung, die du noch am selben Tag machen
+        kannst.
       </p>
 
-      <h2 id="frei">Die ersten {PRODUKT.kostenloseTage} Tage sind frei</h2>
+      <h2 id="frei">Die ersten {PRODUKT.kostenloseTage} Tage kosten nichts</h2>
       <p>
-        Kein Konto, keine Zahlung. Lies sie, mach die Übungen, und entscheide danach — genau so,
-        wie es Tag 3 dir beibringt.
+        Kein Konto, keine Kreditkarte. Lies sie, mach die Übungen, und entscheide danach. Ob dir
+        das liegt, merkst du in zwanzig Minuten und nicht auf einer Verkaufsseite.
       </p>
 
       <ul className="tage">
@@ -47,14 +62,15 @@ export default function Startseite() {
       </ul>
 
       <p style={{ marginTop: "1.5rem" }}>
-        Trag dich ein, wenn dich täglich eine Erinnerung erreichen soll:
+        Wenn dich morgens eine Erinnerung erreichen soll, trag dich hier ein:
       </p>
       <Anmeldung quelle="startseite" />
 
-      <h2>Der Bogen</h2>
+      <h2>Wie die vier Wochen aufgebaut sind</h2>
       <p>
-        Vier Wochen, die aufeinander aufbauen. Wer bei Woche drei anfängt, scheitert an Woche
-        drei — Handeln ohne Grenzen führt zurück in dieselbe Erschöpfung.
+        Sie bauen aufeinander auf, und das ist keine Deko. Wer bei Woche drei einsteigt, scheitert
+        an Woche drei: mehr tun, ohne vorher Grenzen gezogen zu haben, führt genau dorthin zurück,
+        wo du schon warst.
       </p>
 
       {WOCHEN.map((w) => (
@@ -67,16 +83,18 @@ export default function Startseite() {
 
       <h2 id="kaufen">Teilnehmen</h2>
       <p>
-        Einmalig <strong>{preisFormatiert()}</strong> für alle {programmLaenge()} Tage. Kein Abo,
-        keine Verlängerung, dauerhafter Zugang.
+        Alle {programmLaenge()} Tage kosten einmalig <strong>{preisFormatiert()}</strong>. Kein
+        Abo, nichts, was sich verlängert. Du kaufst es einmal und kommst dann wieder rein, so oft
+        du willst.
       </p>
-      <KaufKnopf scharf={scharf} beschriftung={`Programm kaufen — ${preisFormatiert()}`} />
+      <KaufKnopf beschriftung={`Programm kaufen — ${preisFormatiert()}`} />
 
-      <h2>Was es nicht ist</h2>
+      <h2>Wofür das nicht gedacht ist</h2>
       <p className="hinweis">
-        Keine Therapie und kein Ersatz dafür. Wenn dich etwas trägt, das schwerer ist als ein
-        unruhiger Kopf — anhaltende Niedergeschlagenheit, Angst, die den Alltag bestimmt —,
-        dann gehört das in fachliche Hände, nicht in ein Programm zum Selbstlesen.
+        Das hier ist keine Therapie und kein Ersatz dafür. Wenn du gerade etwas trägst, das
+        schwerer ist als ein unruhiger Kopf — eine Niedergeschlagenheit, die nicht weggeht, Angst,
+        die deinen Alltag bestimmt —, dann gehört das zu jemandem, der ausgebildet ist und dir
+        zuhören kann. Nicht in ein Programm, das du allein liest.
       </p>
     </div>
   );

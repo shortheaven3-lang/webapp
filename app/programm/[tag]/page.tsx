@@ -5,7 +5,6 @@ import Anmeldung from "@/components/Anmeldung";
 import KaufKnopf from "@/components/KaufKnopf";
 import { alleLektionen, alsHtml, lektionFuerTag } from "@/lib/lektionen";
 import { preisFormatiert } from "@/lib/preis";
-import { verkaufIstScharf } from "@/lib/stripe";
 import { hatZugang } from "@/lib/zugang";
 
 type Eigenschaften = { params: Promise<{ tag: string }> };
@@ -52,15 +51,16 @@ export default async function LektionsSeite({ params }: Eigenschaften) {
           {lektion.vorschau && <p className="vorspann">{lektion.vorschau}</p>}
 
           <div className="schranke">
-            <h2>Dieser Tag gehört zum Programm</h2>
+            <h2>Hier hört das Kostenlose auf</h2>
             <p>
-              Alle {alle.length} Tage, einmalig {preisFormatiert()}. Kein Abo, dauerhafter Zugang.
+              Alle {alle.length} Tage für einmalig {preisFormatiert()}. Kein Abo — einmal kaufen
+              und dauerhaft drin bleiben.
             </p>
-            <KaufKnopf scharf={verkaufIstScharf()} beschriftung={`Freischalten — ${preisFormatiert()}`} />
+            <KaufKnopf beschriftung={`Freischalten — ${preisFormatiert()}`} />
 
             <p style={{ marginTop: "1.75rem", marginBottom: 0 }}>
-              Noch unschlüssig? Die ersten Tage sind frei — trag dich ein, dann erinnere ich dich
-              daran.
+              Noch nicht sicher? Die ersten Tage kosten nichts. Trag dich ein, dann schicke ich
+              dir eine Erinnerung.
             </p>
             <Anmeldung quelle={`schranke-tag-${lektion.tag}`} />
           </div>

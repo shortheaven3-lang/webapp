@@ -1,41 +1,43 @@
 ---
 tag: 2
-titel: "Disziplin ist kein Aufseher"
+titel: "Der Aufseher im Kopf"
 saeule: "Das Ritual"
 dauer: 7
 kostenlos: true
-vorschau: "Die meisten verwechseln Disziplin mit Strenge. Mit einem inneren Aufseher, der schimpft, wenn du nachlässt."
+vorschau: "Es gibt eine Stimme, die schimpft, wenn du nachlässt. Die meisten halten sie für Disziplin."
 ---
 
-## Der Gedanke
+Die meisten Menschen, die sagen, sie hätten keine Disziplin, haben zu viel Aufseher. Da ist
+eine Stimme, die schimpft, wenn sie nachlassen. Und die klingt so wie jemand, dem sie früher
+nichts recht machen konnten.
 
-Die meisten verwechseln Disziplin mit Strenge. Mit einem inneren Aufseher, der schimpft,
-wenn du nachlässt.
+Der Aufseher funktioniert eine Weile. Solange du Kraft hast, gehorchst du ihm. Wenn die Kraft
+weg ist, bricht alles zusammen, und dann kommt der Satz, den ich zu oft gehört habe: *Ich bin
+halt nicht der Typ dafür.*
 
-Dieser Aufseher funktioniert erstaunlich schlecht. Er erzeugt Gehorsam, solange du Kraft hast,
-und Zusammenbruch, sobald sie ausgeht. Wer sich antreibt, ruht nie — und wer nie ruht, hört
-irgendwann ganz auf.
+Doch, bist du. Du hast nur die falsche Aufsicht.
 
-Disziplin ist etwas anderes. Sie ist ein Versprechen an dich, das du auch dann hältst, wenn
-niemand es prüft. Nicht weil du sonst Ärger bekommst, sondern weil du es dir wert bist.
+Was tatsächlich trägt, ist unspektakulär. Ein Versprechen, das du auch hältst, wenn es keiner
+kontrolliert. Nicht aus Angst vor Ärger. Sondern weil du es dir wert bist — was sich pathetisch
+liest und im Alltag nur bedeutet: du machst es einfach, so wie du dir die Zähne putzt.
 
-Der Unterschied zeigt sich am Tag danach. Der Aufseher bestraft das Aussetzen. Vertrauen nimmt
-es zur Kenntnis und macht weiter. Und genau das entscheidet, ob aus einem Vorsatz eine
-Gewohnheit wird: nicht wie gut du durchhältst, sondern wie schnell du zurückkommst.
+Ob das hält, zeigt sich nie am guten Tag. Es zeigt sich am Tag nach dem Aussetzer. Der Aufseher
+bestraft. Vertrauen nimmt es zur Kenntnis und macht weiter. Fast alles, was ich an Gewohnheiten
+scheitern gesehen habe, ist nicht am ersten Aussetzer gescheitert, sondern an dem, was danach
+im Kopf lief.
 
 ## Die Übung
 
-Wähle **eine** Sache, die du für die nächsten 28 Tage täglich tust. Eine einzige. So klein,
-dass du sie auch am schlechtesten Tag schaffst — zwei Minuten, nicht zwanzig.
+Such dir eine Sache. Eine. So klein, dass du sie auch am miesesten Tag hinbekommst. Zwei
+Minuten, nicht zwanzig.
 
-Dann lege vorher fest, was passiert, wenn du sie vergisst:
+Und dann leg vorher fest, was passiert, wenn du sie vergisst:
 
-> Ich mache am nächsten Tag weiter. Ohne Nachholen, ohne Vorwurf.
+> Ich mache morgen weiter. Nichts nachholen, keine Vorwürfe.
 
-Schreib diesen Satz auf. Er ist der eigentliche Inhalt dieser Übung. Ein Vorsatz scheitert
-selten am ersten Aussetzer — er scheitert an dem, was du dir danach erzählst.
+Schreib den Satz auf. Er ist der eigentliche Inhalt der Übung.
 
 ## Die Frage für heute
 
-Welchen Ton hat die Stimme, die mich antreibt — und würde ich so mit jemandem sprechen,
+In welchem Ton spricht die Stimme, die mich antreibt? Und würde ich so mit jemandem reden,
 den ich mag?

@@ -40,3 +40,27 @@ Ein Eintrag je Entscheidung, neueste oben.
   gerendert. Inhalte als Markdown-Dateien, versioniert wie Code.
 * **Verworfen:** Reines Frontend (kann Inhalte nicht verbergen), CMS (Betrieb und Kosten
   ohne Gegenwert bei 30 Texten).
+
+## 2026-08-29 — Zustimmung zum Erloeschen des Widerrufsrechts vor der Kasse
+
+* **Lage:** Bei digitalen Inhalten erlischt das vierzehntaegige Widerrufsrecht nur vorzeitig,
+  wenn vor dem Kauf dem sofortigen Beginn zugestimmt *und* der Verlust des Widerrufsrechts
+  bestaetigt wird. Ohne das kann jemand alle 30 Tage lesen und danach das Geld zurueckfordern.
+* **Wahl:** Ein nicht vorangekreuztes Kaestchen auf der eigenen Seite. Die Pruefung liegt im
+  Server-Endpunkt der Kasse, nicht nur im Browser. Zustimmung, Zeitpunkt und Textfassung gehen
+  als Metadaten in die Stripe-Sitzung — der Nachweis haengt damit am Zahlungsvorgang und
+  ueberlebt jeden Umbau dieser App.
+* **Verworfen:** Allein auf Stripes `consent_collection.terms_of_service` zu setzen. Das
+  verlangt eine im Stripe-Konto hinterlegte AGB-Adresse und deckt fuer sich genommen nur die
+  AGB ab, nicht die zweiteilige Zustimmung. Es laesst sich ueber `STRIPE_AGB_ZUSTIMMUNG=1`
+  zusaetzlich einschalten.
+
+## 2026-08-29 — Verkaufsbereitschaft nicht beim Bau entscheiden
+
+* **Lage:** Die Verkaufsseite wird vorgerendert. Ob Stripe-Schluessel gesetzt sind, wurde
+  dabei im Build eingefroren — wer die Schluessel spaeter nachtraegt, haette weiterhin
+  "noch nicht scharf" gesehen.
+* **Wahl:** Der Kaufknopf wird immer gezeigt. Ob verkauft werden kann, entscheidet der Server
+  im Moment des Klicks und antwortet sonst mit 503 samt Grund.
+* **Verworfen:** Die Seite dynamisch zu rendern. Das haette die wichtigste Seite des Projekts
+  ohne Not verlangsamt.
