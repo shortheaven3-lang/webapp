@@ -1,17 +1,17 @@
 import "server-only";
 import fs from "node:fs";
 import path from "node:path";
+import { istEmail } from "@/lib/email";
 
 const DATEI = path.join(process.cwd(), ".daten", "anmeldungen.jsonl");
+
+export { istEmail };
 
 export type AnmeldeErgebnis =
   | { ok: true }
   | { ok: false; grund: "ungueltig" | "kein_ziel" | "fehler" };
 
-/** Grobe Prüfung: genau ein @, links und rechts etwas, rechts ein Punkt. */
-export function istEmail(wert: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(wert.trim());
-}
+
 
 /**
  * Speichert eine Anmeldung.

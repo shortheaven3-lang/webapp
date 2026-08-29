@@ -52,7 +52,27 @@ statt der Kasse; Anmeldungen landen in `.daten/anmeldungen.jsonl`.
 ```bash
 npm run build       # Produktionsbau
 npm run typecheck   # nur Typen prüfen
+npm test            # Einheitentests
+npm run test:pfad   # baut und prüft den Geldpfad über HTTP
+npm run test:alle   # beides
 ```
+
+## Was die Tests abdecken
+
+Geprüft wird das, was Geld kostet, wenn es bricht:
+
+* **Der Zugangs-Cookie** (`tests/zugang.test.ts`): veränderte Nutzlast, verlängertes
+  Ablaufdatum, fremdes Geheimnis, abgelaufen, Müll in jeder Form.
+* **Die Inhalte** (`tests/lektionen.test.ts`): lückenlose Nummerierung, gültige Säulen,
+  genau die ersten Tage kostenlos, und kein Entwurf als Kostprobe auf der Verkaufsseite.
+* **Der Geldpfad über HTTP** (`tests/geldpfad.test.mjs`): startet einen echten
+  Produktionsserver und prüft, dass bezahlter Text ohne gültigen Cookie nirgends in der
+  Antwort steht, dass die Kasse ohne Zustimmung nicht aufgeht und dass ein erfundener
+  Rücksprung aus Stripe nichts freischaltet.
+
+Der Geldpfad-Test bricht ab, wenn auf seinem Port schon etwas antwortet. Das ist Absicht:
+Sonst prüft ein Lauf stillschweigend gegen einen alten Serverstand und meldet grün, obwohl
+die Schranke offen steht.
 
 ## Scharf schalten
 

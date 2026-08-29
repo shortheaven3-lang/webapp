@@ -10,6 +10,9 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
+    // Nodes Test-Runner streift die Typen und verlangt dafuer explizite
+    // .ts-Endungen in den Importen der Testdateien.
+    "allowImportingTsExtensions": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",

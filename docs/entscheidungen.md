@@ -64,3 +64,25 @@ Ein Eintrag je Entscheidung, neueste oben.
   im Moment des Klicks und antwortet sonst mit 503 samt Grund.
 * **Verworfen:** Die Seite dynamisch zu rendern. Das haette die wichtigste Seite des Projekts
   ohne Not verlangsamt.
+
+## 2026-08-29 — Tests mit Nodes eigenem Runner, ohne Framework
+
+* **Lage:** Die Bezahlschranke und die Zustimmungspflicht sind die Stellen, an denen ein
+  Fehler direkt Geld kostet. Beides war ungeprueft.
+* **Wahl:** Nodes eingebauter Test-Runner mit Typ-Stripping. Keine zusaetzliche
+  Abhaengigkeit. Dazu ein Test, der einen echten Produktionsserver startet und ueber HTTP
+  prueft — dort, wo die Schranke tatsaechlich wirken muss.
+* **Verworfen:** Vitest oder Jest. Beide haetten fuer diesen Umfang mehr Wartung als Nutzen
+  gebracht.
+* **Nachgewiesen:** Mit absichtlich geoeffneter Schranke schlagen die Tests fehl, nach der
+  Ruecknahme sind sie wieder gruen.
+
+## 2026-08-29 — Der Geldpfad-Test bricht bei belegtem Port ab
+
+* **Lage:** Der Testserver wurde ueber eine Huelle gestartet; `kill` beendete nur die
+  Huelle. Der naechste Lauf fand einen alten Server vor, prueft gegen dessen Stand und
+  meldete gruen, obwohl der neue Code die Schranke geoeffnet hatte.
+* **Wahl:** Eigene Prozessgruppe und Abbruch des ganzen Baums. Zusaetzlich prueft der
+  Test vorher, ob auf dem Port schon etwas antwortet, und bricht dann ab.
+* **Warum das wichtig ist:** Ein Test, der gegen einen alten Stand prueft, ist schlimmer
+  als kein Test. Er behauptet Sicherheit, die es nicht gibt.
