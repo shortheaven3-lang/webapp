@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "test:pfad": "npm run build && node --experimental-strip-types --test tests/*.test.mjs",
-    "test:alle": "npm run test && npm run test:pfad"
+    "test:alle": "npm run test && npm run test:pfad",
+    "mails": "node skripte/mails-rendern.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

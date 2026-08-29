@@ -77,6 +77,37 @@ Der Geldpfad-Test bricht ab, wenn auf seinem Port schon etwas antwortet. Das ist
 Sonst prüft ein Lauf stillschweigend gegen einen alten Serverstand und meldet grün, obwohl
 die Schranke offen steht.
 
+## Die E-Mail-Strecke
+
+Vier Mails: Willkommen mit Tag 1, dann Tag 2 und Tag 3, und einen Tag nach dem letzten
+freien Tag die Einladung zum Kauf. Die Texte liegen in `content/mails/` und sind versioniert
+wie alles andere.
+
+**Den Takt gibt der Versanddienst vor, nicht diese App.** Das ist eine bewusste Entscheidung:
+Eine eigene Strecke müsste festhalten, wer wann welche Mail schon bekommen hat. Ohne
+Datenhaltung wäre das eine Zustandsmaschine ohne Zustand — sie verschickt früher oder später
+doppelt. Dazu kommt die Abmeldeverwaltung, die rechtlich ohnehin beim Dienst liegt.
+
+### Einrichten
+
+1. Konto bei [MailerLite](https://www.mailerlite.com) anlegen. Bis 1.000 Adressen kostenlos,
+   was zu deiner Größe passt.
+2. Eine Gruppe anlegen, etwa *Freie Tage*. Die ID steht in der Adresszeile der Gruppe.
+3. Token unter *Integrations → API* erzeugen. Beides als `MAILERLITE_TOKEN` und
+   `MAILERLITE_GRUPPE` eintragen.
+4. Mails erzeugen:
+   ```bash
+   npm run mails -- https://deine-adresse.at
+   ```
+   Das schreibt HTML und reinen Text nach `.ausgabe/mails/`, mit eingesetzten Links.
+5. In MailerLite eine Automation anlegen: Auslöser *tritt der Gruppe bei*, dann die vier
+   Mails mit den Wartezeiten aus `uebersicht.json` (Tag 0, 1, 2 und 4). HTML einfügen,
+   Betreff und Vorschautext übernehmen.
+6. Selbst eintragen und die Strecke einmal komplett durchlaufen lassen.
+
+Änderst du später einen Text, läuft `npm run mails` erneut und du ersetzt ihn in der
+Automation. Die Wahrheit steht im Repository, die Kopie beim Dienst.
+
 ## Live schalten
 
 Die App ist für Vercel vorbereitet. Der Weg, Schritt für Schritt:

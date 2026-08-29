@@ -31,10 +31,17 @@ export async function POST(anfrage: Request) {
 
   if (ergebnis.grund === "kein_ziel") {
     // Bewusst ehrlich: lieber ein sichtbarer Fehler als eine verlorene Adresse.
-    console.error("ANMELDUNG_WEBHOOK ist nicht gesetzt — Anmeldung verworfen.");
+    console.error("Kein Versandziel eingerichtet — Anmeldung verworfen.");
     return NextResponse.json(
       { meldung: "Das geht gerade nicht. Probier es später noch einmal." },
       { status: 503 },
+    );
+  }
+
+  if (ergebnis.grund === "abgelehnt") {
+    return NextResponse.json(
+      { meldung: "Diese Adresse hat der Versanddienst abgelehnt." },
+      { status: 400 },
     );
   }
 

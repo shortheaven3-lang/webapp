@@ -108,3 +108,25 @@ Ein Eintrag je Entscheidung, neueste oben.
 * **Bleibt bestehen:** Das Vorschaubild und metadataBase haengen weiterhin am Bauzeitpunkt.
   Die Verkaufsseite dafuer dynamisch zu machen waere zu teuer; stattdessen steht im README,
   dass APP_URL vor dem Bau gesetzt sein muss.
+
+## 2026-08-29 — Takt der E-Mail-Strecke liegt beim Versanddienst
+
+* **Lage:** Die Verkaufsseite verspricht taegliche Impulse. Ohne Versand ist das ein
+  offenes Versprechen, und jede gesammelte Adresse wartet auf eine Mail, die nie kommt.
+* **Wahl:** Diese App traegt nur ein. Der Dienst haelt die Adressen, gibt den Takt vor und
+  verwaltet Abmeldungen. Die Texte liegen als Markdown im Repository und werden ueber
+  `npm run mails` zu fertigem HTML.
+* **Verworfen:** Eine eigene Strecke ueber GitHub Actions, wie beim Autoposter. Sie
+  muesste festhalten, wer wann welche Mail bekommen hat — ohne Datenhaltung ist das eine
+  Zustandsmaschine ohne Zustand, die frueher oder spaeter doppelt verschickt. Dazu kaeme
+  die Abmeldeverwaltung, die rechtlich ohnehin beim Dienst liegt.
+* **Preis:** Die Texte liegen doppelt vor, im Repository und beim Dienst. Wer einen Text
+  aendert, muss ihn dort ersetzen. Das ist die Kopie, die wir bewusst in Kauf nehmen.
+
+## 2026-08-29 — HTTP-Tests brechen bei veraltetem Bau ab
+
+* **Lage:** Ein direkt gestarteter HTTP-Test prueft gegen den letzten Produktionsbau. Ist
+  der aelter als der Quelltext, meldet er Fehler, die es nicht gibt — oder gruen fuer Code,
+  der nie gebaut wurde. Genau das ist beim Bau der Anmeldung passiert.
+* **Wahl:** Die Serverhilfe vergleicht das Datum von .next/BUILD_ID mit der juengsten Datei
+  in app, lib, components und content und bricht mit klarer Ansage ab.

@@ -1,4 +1,6 @@
 import { spawn } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
 
 /**
  * Startet einen echten Produktionsserver für die Dauer eines Tests.
@@ -9,7 +11,55 @@ import { spawn } from "node:child_process";
  * auf dem Port schon etwas antwortet, sonst prüft der Lauf gegen einen alten
  * Stand und meldet grün, obwohl der neue Code kaputt ist.
  */
+
+/**
+ * Prueft, ob der Produktionsbau juenger ist als der Quelltext. Ohne diese
+ * Pruefung testet ein direkt gestarteter Testlauf gegen einen alten Bau und
+ * meldet Fehler, die es nicht gibt — oder schlimmer, meldet gruen fuer Code,
+ * der nie gebaut wurde.
+ */
+function pruefeBauIstAktuell() {
+  const kennung = path.join(process.cwd(), ".next", "BUILD_ID");
+  if (!fs.existsSync(kennung)) {
+    throw new Error("Kein Produktionsbau vorhanden. Erst `npm run build` ausfuehren.");
+  }
+
+  const gebautAm = fs.statSync(kennung).mtimeMs;
+  let neuester = 0;
+  let neuesteDatei = "";
+
+  const durchsuche = (ordner) => {
+    if (!fs.existsSync(ordner)) return;
+    for (const eintrag of fs.readdirSync(ordner, { withFileTypes: true })) {
+      const voll = path.join(ordner, eintrag.name);
+      if (eintrag.isDirectory()) {
+        durchsuche(voll);
+      } else {
+        const zeit = fs.statSync(voll).mtimeMs;
+        if (zeit > neuester) {
+          neuester = zeit;
+          neuesteDatei = path.relative(process.cwd(), voll);
+        }
+      }
+    }
+  };
+
+  for (const ordner of ["app", "lib", "components", "content"]) {
+    durchsuche(path.join(process.cwd(), ordner));
+  }
+
+  if (neuester > gebautAm) {
+    throw new Error(
+      `Der Produktionsbau ist aelter als ${neuesteDatei}. ` +
+        "Dieser Lauf wuerde gegen einen alten Stand pruefen. " +
+        "Nutze `npm run test:pfad`, das baut vorher.",
+    );
+  }
+}
+
 export async function starteServer(port, zusatzUmgebung = {}) {
+  pruefeBauIstAktuell();
+
   const basis = `http://localhost:${port}`;
 
   let belegt = false;

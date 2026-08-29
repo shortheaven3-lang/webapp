@@ -40,3 +40,4 @@ next-env.d.ts
 # lokal gespeicherte Anmeldungen (nur Entwicklungsbetrieb)
 .daten/
 tsconfig.tsbuildinfo
+.ausgabe/
