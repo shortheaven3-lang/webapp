@@ -1,0 +1,34 @@
+# Abhaengigkeiten
+node_modules/
+.pnp/
+.pnp.js
+
+# Build-Ergebnisse
+dist/
+build/
+out/
+.next/
+.output/
+
+# Umgebung und Geheimnisse
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Werkzeuge und Betriebssystem
+.DS_Store
+Thumbs.db
+*.log
+.cache/
+coverage/
+
+# Editoren
+.idea/
+.vscode/*
+!.vscode/extensions.json
