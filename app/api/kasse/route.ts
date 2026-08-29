@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { anbieterIstVollstaendig, fehlendeAngaben } from "@/lib/anbieter";
 import { PRODUKT } from "@/lib/preis";
 import { basisAdresse, stripe } from "@/lib/stripe";
 import { WIDERRUF } from "@/lib/widerruf";
@@ -26,6 +27,25 @@ export async function POST(anfrage: Request) {
     return NextResponse.json(
       { meldung: "Ohne die Zustimmung zur sofortigen Bereitstellung geht es nicht weiter." },
       { status: 400 },
+    );
+  }
+
+  // Ohne vollständiges Impressum darf nicht verkauft werden. Die Sperre greift
+  // nur im Produktivbetrieb und lässt sich für Testkäufe mit
+  // VERKAUF_TROTZ_LUECKEN=1 aufheben — bewusst umständlich, damit sie nicht
+  // beiläufig verschwindet.
+  if (
+    !anbieterIstVollstaendig() &&
+    process.env.NODE_ENV === "production" &&
+    process.env.VERKAUF_TROTZ_LUECKEN !== "1"
+  ) {
+    console.error(
+      "Verkauf gesperrt — in lib/anbieter.ts fehlt noch:",
+      fehlendeAngaben().join(", "),
+    );
+    return NextResponse.json(
+      { meldung: "Der Verkauf ist gerade nicht möglich. Bitte melde dich kurz bei mir." },
+      { status: 503 },
     );
   }
 

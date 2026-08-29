@@ -204,3 +204,19 @@ a:hover { text-decoration-color: var(--akzent); }
   cursor: pointer;
 }
 .meldung.leise { color: var(--tinte-still); }
+
+/* Hinweis auf unfertige Rechtstexte */
+.warnung {
+  border: 1px solid var(--akzent);
+  background: var(--akzent-grund);
+  border-radius: 3px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.warnung code {
+  font-size: 0.88em;
+  background: var(--grund-erhoben);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}

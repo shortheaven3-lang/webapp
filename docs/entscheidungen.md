@@ -86,3 +86,14 @@ Ein Eintrag je Entscheidung, neueste oben.
   Test vorher, ob auf dem Port schon etwas antwortet, und bricht dann ab.
 * **Warum das wichtig ist:** Ein Test, der gegen einen alten Stand prueft, ist schlimmer
   als kein Test. Er behauptet Sicherheit, die es nicht gibt.
+
+## 2026-08-29 — Kasse sperrt bei unvollstaendigem Impressum
+
+* **Lage:** Rechtstexte sind der Teil, den man aufschiebt. Ein Deployment mit leerem
+  Impressum ist schnell passiert und teuer.
+* **Wahl:** Anbieterdaten liegen an einer Stelle in lib/anbieter.ts. Fehlen Pflichtfelder,
+  antwortet die Kasse im Produktivbetrieb mit 503 und die Rechtsseiten zeigen einen Hinweis.
+  Fuer Testkaeufe hebt VERKAUF_TROTZ_LUECKEN=1 die Sperre auf.
+* **Verworfen:** Nur ein Kommentar im Code. Der wird gelesen, wenn es zu spaet ist.
+* **Bewusst nicht:** Die Rechtsseiten selbst sperren. Sie muessen erreichbar bleiben, auch
+  waehrend sie unfertig sind.

@@ -9,7 +9,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "test:pfad": "npm run build && node --test tests/geldpfad.test.mjs",
+    "test:pfad": "npm run build && node --experimental-strip-types --test tests/*.test.mjs",
     "test:alle": "npm run test && npm run test:pfad"
   },
   "dependencies": {

@@ -1,7 +1,7 @@
 import { after, before, describe, test } from "node:test";
 import assert from "node:assert/strict";
 import crypto from "node:crypto";
-import { spawn } from "node:child_process";
+import { starteServer } from "./hilfe-server.mjs";
 
 /**
  * Prüft den Geldpfad da, wo er zählt: über HTTP gegen einen laufenden Server.
@@ -11,7 +11,6 @@ import { spawn } from "node:child_process";
  */
 
 const PORT = 3111;
-const BASIS = `http://localhost:${PORT}`;
 const GEHEIM = crypto.randomBytes(32).toString("hex");
 
 // Ein Satz aus einer kostenpflichtigen Lektion. Taucht er im Ausgeliefertem
@@ -29,65 +28,22 @@ function cookieFuer(kaufId, gueltigAb = Date.now()) {
 }
 
 async function hole(pfad, optionen = {}) {
-  const antwort = await fetch(`${BASIS}${pfad}`, { redirect: "manual", ...optionen });
+  const antwort = await fetch(`${server.basis}${pfad}`, { redirect: "manual", ...optionen });
   return { status: antwort.status, text: await antwort.text(), kopf: antwort.headers };
 }
 
 before(async () => {
-  // Erst sicherstellen, dass hier nichts Altes lauscht. Sonst wuerde gegen
-  // einen Server von vorhin geprueft und jede Regression bliebe unsichtbar.
-  try {
-    await fetch(BASIS);
-    throw new Error(
-      `Auf Port ${PORT} antwortet bereits etwas. Beenden und erneut starten — ` +
-        "sonst prueft dieser Lauf gegen einen alten Stand.",
-    );
-  } catch (fehler) {
-    if (fehler instanceof Error && fehler.message.startsWith("Auf Port")) throw fehler;
-  }
-
-  // Eigene Prozessgruppe, damit spaeter der ganze Baum beendet werden kann.
-  // Ein kill auf die Huelle allein laesst den Server weiterlaufen.
-  server = spawn(process.execPath, ["node_modules/next/dist/bin/next", "start", "-p", String(PORT)], {
-    env: {
-      ...process.env,
-      ZUGANG_GEHEIMNIS: GEHEIM,
-      STRIPE_SECRET_KEY: "sk_test_platzhalter_ohne_funktion",
-      NODE_ENV: "production",
-    },
-    stdio: "ignore",
-    detached: true,
+  server = await starteServer(PORT, {
+    ZUGANG_GEHEIMNIS: GEHEIM,
+    STRIPE_SECRET_KEY: "sk_test_platzhalter_ohne_funktion",
+    // Ohne diese Ausnahme sperrt die Kasse, weil die Anbieterangaben in
+    // lib/anbieter.ts noch Platzhalter sind. Dass die Sperre greift, prueft
+    // tests/impressumsperre.test.mjs.
+    VERKAUF_TROTZ_LUECKEN: "1",
   });
-
-  for (let i = 0; i < 60; i++) {
-    try {
-      await fetch(BASIS);
-      return;
-    } catch {
-      await new Promise((r) => setTimeout(r, 500));
-    }
-  }
-  throw new Error("Server ist nicht hochgekommen.");
 });
 
-after(async () => {
-  if (!server?.pid) return;
-  try {
-    process.kill(-server.pid, "SIGKILL");
-  } catch {
-    server.kill("SIGKILL");
-  }
-  // Warten, bis der Port wirklich frei ist — sonst scheitert der naechste Lauf
-  // an der Belegtpruefung oben.
-  for (let i = 0; i < 20; i++) {
-    try {
-      await fetch(BASIS);
-      await new Promise((r) => setTimeout(r, 250));
-    } catch {
-      return;
-    }
-  }
-});
+after(async () => server?.beenden());
 
 describe("Bezahlschranke", () => {
   test("eine freie Lektion wird ausgeliefert", async () => {

@@ -63,6 +63,9 @@ Geprüft wird das, was Geld kostet, wenn es bricht:
 
 * **Der Zugangs-Cookie** (`tests/zugang.test.ts`): veränderte Nutzlast, verlängertes
   Ablaufdatum, fremdes Geheimnis, abgelaufen, Müll in jeder Form.
+* **Die Verkaufssperre** (`tests/impressumsperre.test.mjs`): startet einen Server ohne die
+  Ausnahme und prüft, dass die Kasse bei unvollständigen Anbieterangaben zubleibt. Sobald du
+  sie ausfüllst, prüft derselbe Test, dass sie wieder aufgeht.
 * **Die Inhalte** (`tests/lektionen.test.ts`): lückenlose Nummerierung, gültige Säulen,
   genau die ersten Tage kostenlos, und kein Entwurf als Kostprobe auf der Verkaufsseite.
 * **Der Geldpfad über HTTP** (`tests/geldpfad.test.mjs`): startet einen echten
@@ -88,8 +91,15 @@ die Schranke offen steht.
 
 Das ist keine Formalität, sondern die Bedingung dafür, dass verkauft werden darf:
 
-* **Impressum, AGB und Datenschutz** ausfüllen — die drei Seiten liegen als Platzhalter
-  bereit und benennen, was hineingehört.
+* **Anbieterangaben ausfüllen** in `lib/anbieter.ts`. Name, Anschrift und E-Mail stehen dort
+  an genau einer Stelle; Impressum, AGB und Datenschutz greifen alle darauf zu. Solange
+  Platzhalter drinstehen, **verweigert die Kasse im Produktivbetrieb den Verkauf** (503) und
+  auf den Rechtsseiten steht ein sichtbarer Hinweis. Für Testkäufe lässt sich das mit
+  `VERKAUF_TROTZ_LUECKEN=1` aufheben.
+* **Die drei Rechtstexte durchsehen lassen.** Sie sind ausformuliert, aber ein Entwurf für
+  eine Rechtsberatung — zugeschnitten auf einen Anbieter in Österreich. In Deutschland treten
+  DDG und MStV an die Stelle von ECG und MedienG. Im Datenschutztext fehlen noch die Namen
+  des Hosting-Anbieters und des E-Mail-Dienstes, solange die nicht feststehen.
 * **Widerrufsrecht — eingebaut.** Vor der Kasse steht ein nicht vorangekreuztes Kästchen mit
   der Zustimmung zum sofortigen Beginn und dem Hinweis auf das erlöschende Widerrufsrecht.
   Geprüft wird serverseitig, nicht nur im Browser. Zustimmung, Zeitpunkt und Textfassung
