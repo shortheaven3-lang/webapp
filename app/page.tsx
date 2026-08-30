@@ -46,8 +46,8 @@ export default function Startseite() {
       <div className="anreisser">
         <h2 style={{ marginTop: 0 }}>Wo verlässt du dich selbst?</h2>
         <p>
-          Zwölf Aussagen, zwei Minuten, keine E-Mail-Adresse nötig. Danach weißt du, welcher der
-          vier Bereiche bei dir gerade der lauteste ist — und wo du im Programm anfangen solltest.
+          Zwölf Sätze, zwei Minuten, keine E-Mail-Adresse. Danach weißt du, in welchem der vier
+          Bereiche es bei dir gerade am lautesten ist — und wo du anfangen solltest.
         </p>
         <Link className="knopf" href="/test">
           Selbsttest machen

@@ -49,9 +49,11 @@ describe("Selbsttest im Browser", () => {
     assert.equal(antwort.status, 200);
     const text = await antwort.text();
     assert.ok(text.includes("Wo verlässt du dich selbst"));
-    // Die erste Aussage muss im ausgelieferten HTML stehen, sonst hängt der
-    // Test an JavaScript, das vielleicht nie ankommt.
-    assert.ok(text.includes("Zwölf Aussagen"));
+    // Der Startknopf muss im ausgelieferten HTML stehen, sonst haengt der
+    // Einstieg an JavaScript, das vielleicht nie ankommt. Bewusst der Knopf
+    // und kein Fliesstext: der wird beim Feilen an der Sprache ohnehin
+    // umgeschrieben, der Knopf nicht.
+    assert.ok(text.includes("Test starten"));
   });
 
   test("jede Ergebnisseite antwortet und nennt ihren Kernsatz", async () => {
@@ -73,8 +75,9 @@ describe("Selbsttest im Browser", () => {
     const mit = await (await fetch(`${server.basis}/test/sehen?niveau=niedrig`)).text();
     const ohne = await (await fetch(`${server.basis}/test/sehen?niveau=hoch`)).text();
 
-    assert.ok(mit.includes("brauchst du dieses Programm gerade nicht"));
-    assert.ok(!ohne.includes("brauchst du dieses Programm gerade nicht"));
+    const satz = "gerade nicht brauchst";
+    assert.ok(mit.includes(satz));
+    assert.ok(!ohne.includes(satz));
   });
 
   test("ein unsinniges Niveau kippt die Seite nicht", async () => {

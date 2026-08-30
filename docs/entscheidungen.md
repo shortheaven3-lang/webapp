@@ -159,3 +159,17 @@ Ein Eintrag je Entscheidung, neueste oben.
   jedem ein Problem bescheinigt, ist keiner.
 * **Gleichstand:** Gewinnt der Bereich, der im Programm zuerst drankommt. Die Wochen bauen
   aufeinander auf; wer bei Grenzen und Handeln gleich hoch liegt, faengt bei Grenzen an.
+
+## 2026-08-30 — Aussagen des Selbsttests konkretisiert
+
+* **Lage:** Die zwoelf Aussagen beschrieben Kategorien statt Szenen ("Ich schiebe eine Sache
+  seit Wochen vor mir her"). So steht es in jedem Ratgeber; niemand liest das und denkt,
+  hier sitzt jemand, der es kennt.
+* **Wahl:** Jede Aussage traegt jetzt einen Ort, eine Uhrzeit oder einen gedachten Satz —
+  das Auto vor der Tuer, halb elf, "Dann fange ich eben Montag neu an". Dasselbe bei den
+  Ergebnistexten.
+* **Abgesichert:** Zwei Tests halten den Stand. Jede Aussage muss in der ersten Person
+  stehen (ohne Ich wird daraus wieder eine Kategorie) und zwischen 35 und 95 Zeichen lang
+  sein, weil sie gross gesetzt allein auf dem Bildschirm steht.
+* **Nebenbei:** Ein Seitentest hing an einer Formulierung aus dem Fliesstext. Er prueft
+  jetzt auf den Startknopf — der wird beim Feilen an der Sprache nicht mit umgeschrieben.

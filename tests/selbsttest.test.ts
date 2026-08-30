@@ -29,6 +29,23 @@ describe("Selbsttest — Inhalt", () => {
     }
   });
 
+  test("jede Aussage spricht in der ersten Person", () => {
+    // Eine Aussage ohne Ich ist keine Aussage über die lesende Person mehr,
+    // sondern eine Kategorie. Genau daran kippt so ein Test ins Allgemeine.
+    for (const a of AUSSAGEN) {
+      assert.match(a.text, /\b(ich|mir|mich|meine[nmr]?)\b/i, `${a.id}: keine erste Person`);
+    }
+  });
+
+  test("jede Aussage bleibt lesbar kurz", () => {
+    // Sie steht groß gesetzt allein auf dem Bildschirm. Über etwa 95 Zeichen
+    // bricht sie auf dem Handy in vier Zeilen und verliert ihre Wirkung.
+    for (const a of AUSSAGEN) {
+      assert.ok(a.text.length <= 95, `${a.id}: ${a.text.length} Zeichen, zu lang`);
+      assert.ok(a.text.length >= 35, `${a.id}: ${a.text.length} Zeichen, zu dünn`);
+    }
+  });
+
   test("zu jedem Bereich gibt es ein vollständiges Ergebnis", () => {
     for (const b of BEREICHE) {
       const e = ERGEBNISSE[b];

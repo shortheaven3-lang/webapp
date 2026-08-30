@@ -56,13 +56,12 @@ export default function Selbsttest() {
     return (
       <>
         <p>
-          Zwölf Aussagen, etwa zwei Minuten. Du liest jeden Satz und sagst, wie oft er auf dich
-          zutrifft. Es gibt keine Punktzahl und keinen Typ, den du danach bist — am Ende steht,
-          welcher der vier Bereiche bei dir gerade der lauteste ist.
+          Zwölf Sätze. Du liest jeden und sagst, wie oft er auf dich zutrifft. Am Ende steht kein
+          Punktestand und kein Typ, der du dann bist, sondern der Bereich, in dem es bei dir
+          gerade am lautesten ist.
         </p>
         <p>
-          Kein Konto, keine E-Mail-Adresse nötig. Die Antworten bleiben in deinem Browser und
-          werden nirgends gespeichert.
+          Kein Konto, keine E-Mail-Adresse. Die Antworten bleiben in deinem Browser.
         </p>
         <button className="knopf" onClick={() => setGestartet(true)}>
           Test starten

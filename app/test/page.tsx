@@ -4,7 +4,7 @@ import Selbsttest from "@/components/Selbsttest";
 export const metadata: Metadata = {
   title: "Selbsttest",
   description:
-    "Zwölf Aussagen, zwei Minuten. Danach weißt du, welcher der vier Bereiche bei dir gerade der lauteste ist.",
+    "Zwölf Sätze, zwei Minuten. Danach weißt du, in welchem der vier Bereiche es bei dir gerade am lautesten ist.",
 };
 
 export default function TestSeite() {

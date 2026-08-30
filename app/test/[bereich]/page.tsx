@@ -50,16 +50,16 @@ export default async function ErgebnisSeite({ params, searchParams }: Eigenschaf
 
       {istNiveau(niveau) && niveau === "niedrig" && (
         <p className="hinweis">
-          Zur Einordnung: Du hast fast überall mit „selten“ geantwortet. Dann ist das oben eher
-          eine Tendenz als ein Problem — und möglicherweise brauchst du dieses Programm gerade
-          nicht. Das ist eine gute Nachricht, auch wenn sie sich als Verkaufsseite schlecht macht.
+          Fast überall „selten“ — dann ist das oben eine Tendenz und kein Problem. Gut möglich,
+          dass du das hier gerade nicht brauchst. Von den beiden Nachrichten ist das die bessere,
+          auch wenn sie sich auf einer Verkaufsseite seltsam liest.
         </p>
       )}
 
-      <h2>Hier setzt es an</h2>
+      <h2>Da fängst du an</h2>
       <p>
-        Diese drei Tage gehen direkt auf das ein, was bei dir herausgekommen ist. Tag 1 bis 3
-        sind frei zugänglich.
+        Diese drei Tage gehen genau darauf ein. Tag 1 bis 3 kosten nichts, für die anderen
+        brauchst du das Programm.
       </p>
 
       <ul className="tage">
@@ -84,8 +84,8 @@ export default async function ErgebnisSeite({ params, searchParams }: Eigenschaf
 
       <h2>Die ersten drei Tage kostenlos</h2>
       <p>
-        Trag dich ein, dann bekommst du sie der Reihe nach zugeschickt — angefangen bei Tag 1,
-        weil die vier Wochen aufeinander aufbauen.
+        Trag dich ein, dann kommen sie der Reihe nach. Angefangen bei Tag 1, auch wenn dein
+        Ergebnis woanders liegt — die vier Wochen bauen aufeinander auf.
       </p>
       <Anmeldung quelle={`selbsttest-${bereich}`} />
 
@@ -95,8 +95,8 @@ export default async function ErgebnisSeite({ params, searchParams }: Eigenschaf
       </p>
 
       <p className="hinweis">
-        Der Test sortiert, er diagnostiziert nicht. Zwölf Aussagen können nicht wissen, wie es
-        dir geht — sie können nur zeigen, worauf du beim Lesen zuerst schauen solltest.
+        Der Test sortiert, er stellt keine Diagnose. Zwölf Sätze können nicht wissen, wie es dir
+        geht. Sie können nur zeigen, wo du zuerst hinschauen solltest.
       </p>
     </div>
   );

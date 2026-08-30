@@ -29,62 +29,62 @@ export const AUSSAGEN: Aussage[] = [
   {
     id: "s1",
     bereich: "sehen",
-    text: "Am Abend fällt mir auf, dass der Tag anderen gehört hat.",
+    text: "Ich sitze abends im Auto vor der Tür und weiß nicht, wo der Tag hin ist.",
   },
   {
     id: "g1",
     bereich: "grenzen",
-    text: "Ich sage zu und ärgere mich zwei Sekunden später darüber.",
+    text: "Ich höre mich Ja sagen und denke gleichzeitig: Warum jetzt?",
   },
   {
     id: "h1",
     bereich: "handeln",
-    text: "Ich schiebe eine Sache seit Wochen vor mir her, obwohl ich weiß, was zu tun wäre.",
+    text: "Es gibt einen Anruf, den ich seit Wochen jeden Morgen auf morgen verschiebe.",
   },
   {
     id: "l1",
     bereich: "loslassen",
-    text: "Ich führe Gespräche im Kopf, die längst vorbei sind.",
+    text: "Ich führe Gespräche im Kopf, in denen ich endlich die richtige Antwort habe.",
   },
   {
     id: "s2",
     bereich: "sehen",
-    text: "Dass mich etwas gestört hat, merke ich erst Stunden später.",
+    text: "Erst unter der Dusche fällt mir ein, was mich an dem Gespräch gestört hat.",
   },
   {
     id: "g2",
     bereich: "grenzen",
-    text: "Wenn ich absage, liefere ich Gründe mit, nach denen niemand gefragt hat.",
+    text: "Für ein Nein habe ich drei Gründe parat, nach denen niemand gefragt hat.",
   },
   {
     id: "h2",
     bereich: "handeln",
-    text: "Ich warte auf den passenden Moment, um anzufangen.",
+    text: "Ich räume erst den Schreibtisch auf. Dann ist der Vormittag weg.",
   },
   {
     id: "l2",
     bereich: "loslassen",
-    text: "Ich warte darauf, dass jemand einsieht, was er mir angetan hat.",
+    text: "Ich warte auf einen Satz, den diese Person nie sagen wird.",
   },
   {
     id: "s3",
     bereich: "sehen",
-    text: "Wenn mich jemand fragt, wie es mir geht, muss ich erst überlegen.",
+    text: "Jemand fragt, wie es mir geht, und ich sage „gut“, bevor ich nachgesehen habe.",
   },
   {
     id: "g3",
     bereich: "grenzen",
-    text: "Ich antworte sofort auf Nachrichten, auch wenn ich gerade etwas anderes mache.",
+    text: "Es ist halb elf und ich beantworte noch eine Nachricht, die bis morgen Zeit hätte.",
   },
   {
     id: "h3",
     bereich: "handeln",
-    text: "Wenn ich einen Tag auslasse, lasse ich den nächsten auch aus.",
+    text: "Nach einem ausgelassenen Tag denke ich: Dann fange ich eben Montag neu an.",
   },
   {
     id: "l3",
     bereich: "loslassen",
-    text: "Ich schaue nach, was jemand macht, mit dem ich eigentlich abgeschlossen habe.",
+    text: "Ich habe diese Woche nachgesehen, was jemand macht, mit dem ich abgeschlossen habe.",
   },
 ];
 
@@ -106,11 +106,11 @@ export const ERGEBNISSE: Record<Bereich, Ergebnis> = {
   sehen: {
     bereich: "sehen",
     titel: "Du merkst es zu spät",
-    kern: "Es ist nicht so, dass du dich übergehst. Du bemerkst es nur erst hinterher.",
+    kern: "Zwischen dem Moment und dem Bemerken liegt bei dir der größte Abstand.",
     text: [
-      "Bei dir ist der Abstand zwischen dem Moment und dem Bemerken am größten. Du sagst zu, du schluckst etwas, du übergehst dich — und die Rechnung kommt Stunden später, wenn nichts mehr zu ändern ist.",
-      "Das ist die unangenehmste Ausgangslage, weil sie sich nach nichts anfühlt. Man merkt ja nichts. Und es ist zugleich die beste, weil sich daran am schnellsten etwas ändert: Bemerken ist eine Fähigkeit, keine Charaktereigenschaft.",
-      "Alles Weitere setzt darauf auf. Grenzen ziehen kann nur, wer die Grenzüberschreitung mitbekommt, während sie passiert.",
+      "Du übergehst dich nicht öfter als andere. Du bekommst es nur später mit. Das Ja ist schon draußen, die Tür ist schon zu, und irgendwann später meldet sich das Gefühl, das vorher dran gewesen wäre.",
+      "Das fühlt sich nach nichts an, und genau darin liegt das Zähe. Man kann schwer etwas ändern, das man nicht bemerkt hat. Viele halten sich deshalb für zufrieden und sind bloß langsam.",
+      "Die gute Nachricht steckt in derselben Sache. Bemerken ist keine Eigenschaft, die man hat oder nicht hat, sondern eine Frage von Sekunden. Und die werden kürzer, wenn man ein paar Tage darauf achtet.",
     ],
     woche: "Woche 1 — Sehen",
     tage: [1, 6, 7],
@@ -118,11 +118,11 @@ export const ERGEBNISSE: Record<Bereich, Ergebnis> = {
   grenzen: {
     bereich: "grenzen",
     titel: "Du sagst Ja und meinst Nein",
-    kern: "Du weißt meistens, was du willst. Es kommt nur nicht heraus.",
+    kern: "Du weißt ziemlich genau, was du willst. Es kommt nur nicht heraus.",
     text: [
-      "Bei dir liegt es nicht am Sehen. Du merkst ziemlich genau, wann dir etwas zu viel ist — es kommt nur nicht nach außen. Stattdessen kommen Gründe, Erklärungen, ein Ja, das eigentlich ein Nein war.",
-      "Dahinter steckt selten Schwäche. Meistens steckt dahinter eine alte Rechnung: Widerspruch war irgendwann teuer, und der Reflex, Spannung aus dem Raum zu nehmen, hat sich seitdem gehalten.",
-      "Der Weg dort heraus ist unspektakulär und unbequem. Es geht um einzelne Sätze, um die Stille danach, und darum, sie auszuhalten, ohne sie zu füllen.",
+      "Am Merken liegt es bei dir nicht. Du spürst früh, wann dir etwas zu viel wird. Zwischen dem Spüren und dem Sagen gibt es nur diese eine Stelle, an der es regelmäßig abbiegt — meistens Richtung Erklärung.",
+      "Dahinter steckt selten Schwäche. Meistens eine alte Erfahrung: Widerspruch war irgendwann teuer, und der Reflex, Spannung aus dem Raum zu nehmen, ist geblieben, obwohl die Lage sich längst geändert hat.",
+      "Was hilft, ist unspektakulär. Ein Satz ohne Begründung, und die drei Sekunden Stille danach. Genau dort knicken die meisten ein und liefern doch noch einen Grund nach.",
     ],
     woche: "Woche 2 — Grenzen",
     tage: [3, 8, 9],
@@ -130,11 +130,11 @@ export const ERGEBNISSE: Record<Bereich, Ergebnis> = {
   handeln: {
     bereich: "handeln",
     titel: "Du weißt es und tust es nicht",
-    kern: "An Einsicht fehlt es bei dir nicht. An Anfangen schon.",
+    kern: "Du weißt es, du nimmst es dir vor, und dann passiert es trotzdem nicht.",
     text: [
-      "Du weißt ziemlich genau, was zu tun wäre. Es passiert nur nicht. Und weil du es weißt, kommt zur Sache selbst noch der Ärger darüber dazu, dass du sie nicht angehst.",
-      "Fast immer steckt eine falsche Reihenfolge dahinter: die Annahme, dass erst die Bereitschaft kommt und dann das Tun. Es ist umgekehrt. Man fängt unmotiviert an, arbeitet zehn Minuten schlecht, und irgendwo dazwischen kippt es.",
-      "Dazu kommt die Größe. Was sich Leute vornehmen, ist meistens auf gute Tage zugeschnitten. Entschieden wird aber an den schlechten.",
+      "An Einsicht fehlt es dir nicht. Die Sache, die du seit Wochen vor dir herschiebst, könntest du in zwei Sätzen erklären. Deshalb kommt zur Sache noch der Ärger darüber, dass sie liegen bleibt — und der macht sie schwerer, nicht leichter.",
+      "Meistens steckt eine verdrehte Reihenfolge dahinter: die Annahme, dass erst die Bereitschaft kommt und dann das Anfangen. Es läuft andersherum. Man setzt sich lustlos hin, macht zehn Minuten schlecht, und irgendwo dazwischen kippt es.",
+      "Dazu die Größe. Was Leute sich vornehmen, ist auf gute Tage gerechnet. Entschieden wird an den schlechten, und davon gibt es mehr.",
     ],
     woche: "Woche 3 — Handeln",
     tage: [2, 15, 18],
@@ -142,11 +142,11 @@ export const ERGEBNISSE: Record<Bereich, Ergebnis> = {
   loslassen: {
     bereich: "loslassen",
     titel: "Du hältst fest, was vorbei ist",
-    kern: "Ein Teil deiner Aufmerksamkeit ist noch woanders gebunden.",
+    kern: "Ein Teil von dir ist noch in einer Sache, die längst vorbei ist.",
     text: [
-      "Bei dir liegt etwas offen. Eine Sache, eine Person, eine Rechnung, die nie beglichen wurde. Und ein Teil deiner Aufmerksamkeit ist noch dort, jeden Tag ein bisschen.",
-      "Das Zähe daran ist, dass es sich nach Treue anfühlt oder nach Gerechtigkeit. Man wartet auf die Einsicht, die Entschuldigung, den Moment, in dem endlich jemand zugibt, dass man recht hatte. Der andere lebt weiter und merkt nichts davon.",
-      "Loslassen ist dabei kein Gefühl, auf das man wartet. Es sind fünfzig kleine Unterlassungen, und das Gefühl kommt hinterher.",
+      "Da liegt etwas offen. Eine Person, ein Satz, der nie gesagt wurde, eine Rechnung, die niemand mehr begleicht. Und ein Teil deiner Aufmerksamkeit ist jeden Tag noch kurz dort.",
+      "Zäh wird es, weil es sich nach Treue anfühlt oder nach Gerechtigkeit. Man wartet auf die Einsicht, die Entschuldigung, den Moment, in dem endlich jemand zugibt, dass man recht hatte. Die andere Seite weiß meistens nicht einmal davon.",
+      "Loslassen ist dabei kein Gefühl, auf das man wartet. Es sind fünfzig kleine Unterlassungen, und das Gefühl kommt erst, wenn die schon eine Weile laufen.",
     ],
     woche: "Woche 4 — Loslassen",
     tage: [22, 23, 24],
