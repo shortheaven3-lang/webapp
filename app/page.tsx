@@ -43,6 +43,17 @@ export default function Startseite() {
         kannst.
       </p>
 
+      <div className="anreisser">
+        <h2 style={{ marginTop: 0 }}>Wo verlässt du dich selbst?</h2>
+        <p>
+          Zwölf Aussagen, zwei Minuten, keine E-Mail-Adresse nötig. Danach weißt du, welcher der
+          vier Bereiche bei dir gerade der lauteste ist — und wo du im Programm anfangen solltest.
+        </p>
+        <Link className="knopf" href="/test">
+          Selbsttest machen
+        </Link>
+      </div>
+
       <h2 id="frei">Die ersten {PRODUKT.kostenloseTage} Tage kosten nichts</h2>
       <p>
         Kein Konto, keine Kreditkarte. Lies sie, mach die Übungen, und entscheide danach. Ob dir

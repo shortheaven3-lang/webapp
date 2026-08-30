@@ -143,3 +143,19 @@ Ein Eintrag je Entscheidung, neueste oben.
   auf — sie funktionieren nur, wenn die Uebungen davor gemacht wurden. Das ist Absicht.
 * **Offen:** Der Text ist nicht lektoriert. Das gehoert vor dem Verkauf von jemandem
   gelesen, der nicht daran geschrieben hat.
+
+## 2026-08-30 — Selbsttest als Einstieg
+
+* **Lage:** Der Einstieg war die Verkaufsseite. Die redet ueber das Produkt, und wer sie
+  ohne Vorbereitung sieht, hat keinen Grund zu bleiben.
+* **Wahl:** Zwoelf Aussagen, vier Bereiche, ein Ergebnis mit eigener Adresse und eigenem
+  Vorschaubild. Keine E-Mail noetig, um das Ergebnis zu sehen — die Anmeldung kommt danach
+  und traegt den Bereich als Quelle mit.
+* **Verworfen:** Ergebnis erst nach Eintragen der Adresse. Das erhoeht die Ausbeute je
+  Besucher und senkt die Zahl der Besucher, weil es sich wie eine Mautstelle anfuehlt. Bei
+  unter 1.000 Followern ist Reichweite knapper als Ausbeute.
+* **Bewusst gegen die eigene Kasse:** Wer fast ueberall "selten" antwortet, bekommt auf der
+  Ergebnisseite gesagt, dass er das Programm gerade vielleicht nicht braucht. Ein Test, der
+  jedem ein Problem bescheinigt, ist keiner.
+* **Gleichstand:** Gewinnt der Bereich, der im Programm zuerst drankommt. Die Wochen bauen
+  aufeinander auf; wer bei Grenzen und Handeln gleich hoch liegt, faengt bei Grenzen an.

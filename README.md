@@ -77,6 +77,36 @@ Der Geldpfad-Test bricht ab, wenn auf seinem Port schon etwas antwortet. Das ist
 Sonst prüft ein Lauf stillschweigend gegen einen alten Serverstand und meldet grün, obwohl
 die Schranke offen steht.
 
+## Der Selbsttest
+
+Zwölf Aussagen, zwei Minuten, keine E-Mail-Adresse nötig. Am Ende steht, welcher der vier
+Bereiche gerade der lauteste ist — und welche Tage dort ansetzen.
+
+Warum das der wichtigste Einstieg ist: Er redet über den Besucher statt über das Produkt.
+Wer sein Ergebnis gelesen hat, ist deutlich eher bereit, die drei freien Tage zu nehmen, als
+jemand, der auf einer Verkaufsseite gelandet ist.
+
+```
+content/selbsttest.ts        Aussagen, Bereiche und Ergebnistexte
+lib/selbsttest.ts            Auswertung, ohne Next-Bindung und damit prüfbar
+components/Selbsttest.tsx    eine Aussage pro Bildschirm
+app/test/                    Einstieg und die vier Ergebnisseiten
+```
+
+Drei Dinge, die dabei absichtlich so sind:
+
+* **Jede Ergebnisseite hat eine eigene Adresse und ein eigenes Vorschaubild.** Wer sein
+  Ergebnis in einer Story teilt, teilt keinen nackten Link, sondern einen Satz, auf den
+  andere reagieren.
+* **Die Anmeldung vom Ergebnis trägt den Bereich mit** (`quelle: selbsttest-grenzen`). Damit
+  siehst du im Versanddienst, welches Ergebnis welche Anmeldungen bringt.
+* **Bei durchgehend niedrigen Antworten sagt die Ergebnisseite, dass das Programm gerade
+  vielleicht nicht nötig ist.** Das kostet ein paar Anmeldungen und ist trotzdem richtig: Ein
+  Test, der jedem ein Problem bescheinigt, ist kein Test, sondern ein Verkaufstrichter mit
+  Fragezeichen.
+
+Der Test sortiert, er diagnostiziert nicht — das steht auch auf der Ergebnisseite.
+
 ## Die E-Mail-Strecke
 
 Vier Mails: Willkommen mit Tag 1, dann Tag 2 und Tag 3, und einen Tag nach dem letzten

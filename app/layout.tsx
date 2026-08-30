@@ -40,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {PRODUKT.name}
             </Link>
             <nav>
+              <Link href="/test">Selbsttest</Link>
               <Link href="/programm">Programm</Link>
               <Link href="/#kaufen">Teilnehmen</Link>
             </nav>

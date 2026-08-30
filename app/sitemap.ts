@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { BEREICHE } from "@/content/selbsttest";
 import { alleLektionen } from "@/lib/lektionen";
 import { basisAdresse } from "@/lib/adresse";
 
@@ -21,9 +22,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
+  // Der Selbsttest und seine vier Ergebnisse gehoeren in den Index: sie sind
+  // frei zugaenglich und der haeufigste erste Kontakt.
+  const ergebnisse = BEREICHE.map((bereich) => ({
+    url: `${basis}/test/${bereich}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     { url: basis, changeFrequency: "weekly", priority: 1 },
+    { url: `${basis}/test`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${basis}/programm`, changeFrequency: "monthly", priority: 0.8 },
+    ...ergebnisse,
     ...frei,
   ];
 }

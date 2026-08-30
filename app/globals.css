@@ -220,3 +220,79 @@ a:hover { text-decoration-color: var(--akzent); }
   padding: 0.1em 0.35em;
   border-radius: 2px;
 }
+
+/* Selbsttest */
+.test { margin: 2rem 0; }
+
+.fortschritt {
+  height: 2px;
+  background: var(--linie);
+  margin: 0 0 2.5rem;
+}
+.fortschritt span {
+  display: block;
+  height: 100%;
+  background: var(--akzent);
+  transition: width 0.25s ease;
+}
+
+.test-aussage {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+  line-height: 1.4;
+  margin: 0 0 2.5rem;
+  min-height: 4.5em;
+  text-wrap: pretty;
+}
+.test-aussage:focus-visible { outline: none; }
+
+.test-stufen { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.test-stufen .knopf {
+  flex: 1 1 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-color: var(--linie);
+}
+.test-stufen .knopf:hover { border-color: var(--akzent); }
+.taste {
+  font-size: 0.72rem;
+  color: var(--tinte-still);
+  border: 1px solid var(--linie);
+  border-radius: 2px;
+  padding: 0 0.32rem;
+}
+
+.zurueck {
+  margin-top: 1.75rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--tinte-still);
+  cursor: pointer;
+}
+.zurueck:hover { color: var(--tinte); }
+
+/* Ergebnis */
+.ergebnis-kern {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: var(--tinte-leise);
+  border-left: 2px solid var(--akzent);
+  padding-left: 1.1rem;
+  margin: 0 0 2rem;
+}
+
+/* Anreisser fuer den Selbsttest auf der Startseite */
+.anreisser {
+  border: 1px solid var(--linie);
+  border-radius: 3px;
+  background: var(--grund-erhoben);
+  padding: 1.5rem 1.6rem;
+  margin: 2.5rem 0;
+}
+.anreisser p { color: var(--tinte-leise); }
